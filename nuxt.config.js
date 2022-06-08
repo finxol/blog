@@ -16,22 +16,18 @@ const settings = {
         discover: [
             {
                 key: 'footer.links.discover.ourTeam',
-                href: 'https://nuxtjs.org/team'
+                href: 'https://github.com/finxol'
             },
             {
                 key: 'footer.links.discover.contactUs',
-                href: 'https://twitter.com/nuxt_js'
+                href: 'mailto:contact@finxol.io'
             }
         ],
         help: [
             {
                 key: 'footer.links.help.resources',
-                href: 'https://nuxtjs.org/faq'
+                href: 'https://github.com/finxol/blog'
             },
-            {
-                key: 'footer.links.help.chatWithUs',
-                href: 'https://discord.nuxtjs.org'
-            }
         ]
     }
 }
