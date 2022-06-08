@@ -2,7 +2,7 @@
 title: HeroCTF Write-Up SSHs
 description: Write-up for the HeroCTF SSH challenge
 image: /blog/heroctf.jpg
-publishedAt: 2022-06-08
+publishedAt: 2022-05-30
 authors:
   - name: Finxol
     avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
