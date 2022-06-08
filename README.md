@@ -1,4 +1,4 @@
-# nuxt-blog-clone
+# nuxt-blog
 
 ## Setup
 
