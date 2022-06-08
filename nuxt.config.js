@@ -64,7 +64,7 @@ export default theme({
             },
             {
                 code: 'en',
-                iso: 'en-US',
+                iso: 'en-GB',
                 name: 'English'
             }
         ],
@@ -72,7 +72,7 @@ export default theme({
         vueI18n: {
             fallbackLocale: 'en',
             messages: {
-                en: require('./i18n/en-US'),
+                en: require('./i18n/en-GB'),
                 fr: require('./i18n/fr-FR')
             }
         }
