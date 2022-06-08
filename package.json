@@ -1,0 +1,17 @@
+{
+  "name": "finxol-blog",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@jsilva-pt/nuxt-content-theme-blog": "^0.6.1",
+    "chart.js": "^3.8.0",
+    "nuxt": "^2.15.8",
+    "vue-chartjs": "^3.5.1"
+  }
+}
