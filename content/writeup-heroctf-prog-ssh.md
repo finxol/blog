@@ -1,6 +1,6 @@
 ---
 title: HeroCTF Write-Up SSHs
-description: Write-up for the HeroCTF SSH challenge
+description: Write-up of the SSHs challenge at HeroCTF 2022
 image: /blog/heroctf.jpg
 publishedAt: 2022-05-30
 authors:
@@ -9,7 +9,7 @@ authors:
     link: https://github.com/finxol
 tags:
   - writeup
-  - heroctf
+  - HeroCTF
   - prog
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: MidnightFlag CTF Write-Up Will the big wheel
-description: Write-up du challenge web Will the big wheel au MidnightFlag CTF 2022
+description: Write-up du challenge web Will the big wheel du MidnightFlag CTF 2022
 image: /blog/infektionctf.png
 publishedAt: 2022-04-24
 authors:
@@ -73,13 +73,13 @@ La première semble être dans le nord de l'Ukraine, et les autres sont proches.
 Le message décodé dit également "Je vous attendrai au centre".
 Nous pouvons déduire de cette phrase que l'agent attendra au centre de ces trois coordonnées.
 
-En effectuant une recherche rapide sur le calcul de la moyenne de coordonnés GPS, nous trouvons un script javascript [sur Github Gist] (https://gist.github.com/tlhunter/0ea604b77775b3e7d7d25ea0f70a23eb).
+En effectuant une recherche rapide sur le calcul de la moyenne de coordonnés GPS, nous trouvons un script javascript [sur Github Gist](https://gist.github.com/tlhunter/0ea604b77775b3e7d7d25ea0f70a23eb).
 Nous pouvons alors adapter un exemple avec nos coordonnées, et nous obtenons un résultat !
 
 ![Calculating the average coordinate](/blog/writeup-midnightflag-osint-will-the-big-wheel/average_coord.png)
 
-En plaçant ces coordonnées sur une carte, nous arrivons [près du parc d'attractions] (https://www.google.com/maps/place/Pripyat+amusement+park/@51.4053954,30.0488085,2337m/data=!3m1!1e3!4m13!1m7!3m6!1s0x0:0x8b035e1594d47a36!2zNTHCsDI0JzE0LjMiTiAzMMKwMDMnMTYuNSJF!3 b1!8m2!3d51.403957!4d30.0545768!3m4!1s0x472a7c5de9f5c0fb:0x87aa178315dd0d18!8m2!3d51.4078925!4d30.055647)
-où se trouve la roue présente sur la photo.
+En plaçant ces coordonnées sur une carte, nous arrivons
+[près du parc d'attraction](https://www.google.com/maps/place/Pripyat+amusement+park/@51.4053954,30.0488085,2337m/data=!3m1!1e3!4m13!1m7!3m6!1s0x0:0x8b035e1594d47a36!2zNTHCsDI0JzE0LjMiTiAzMMKwMDMnMTYuNSJF!3b1!8m2!3d51.403957!4d30.0545768!3m4!1s0x472a7c5de9f5c0fb:0x87aa178315dd0d18!8m2!3d51.4078925!4d30.055647)
 
 Nous regardons ensuite le point d'intérêt le plus proche, et nous trouvons **Чорнобиль**, ce qui signifie Tchernobyl.
 

@@ -1,6 +1,6 @@
 ---
 title: 404CTF Write-Up À l'aube d'un échange
-description: Write-up for the 404CTF À l'aube d'un échange OSINT challenge
+description: Write-up of the OSINT challenge À l'aube d'un échange at 404CTF 2022
 image: /blog/404ctf.png
 publishedAt: 2022-06-08
 authors:
@@ -10,7 +10,7 @@ authors:
 tags:
   - writeup
   - 404ctf
-  - osint
+  - OSINT
 
 ---
 

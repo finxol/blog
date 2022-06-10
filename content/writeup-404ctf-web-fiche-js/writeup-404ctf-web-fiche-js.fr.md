@@ -1,6 +1,6 @@
 ---
 title: 404CTF Write-Up Fiché JS
-description: Write-up du challenge web Fiché JS au 404CTF 2022
+description: Write-up du challenge web Fiché JS du 404CTF 2022
 image: /blog/404ctf.png
 publishedAt: 2022-06-04
 authors:
