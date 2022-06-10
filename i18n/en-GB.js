@@ -4,12 +4,12 @@ module.exports = {
     meta: {
         title: 'Finxol Blog',
         description:
-            'Discover articles and write-ups about technology, cyber security, and more.',
+            'Articles and write-ups about technology, cyber security, and more.',
     },
     welcome: {
         title: 'Finxol Blog',
         description:
-            'Discover articles and write-ups about technology, cyber security, and more.',
+            'Articles and write-ups about technology, cyber security, and more.',
         sidenote: "All articles might not be available in both languages.",
     },
     contribute: {

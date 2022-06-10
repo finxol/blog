@@ -4,13 +4,13 @@ module.exports = {
     meta: {
         title: 'Finxol Blog',
         description:
-            "Découvrez des articles et des write-up sur la technologie, la sécurité et plus encore.",
+            "Des articles et write-up sur la technologie, la sécurité et plus encore.",
     },
     welcome: {
         title: 'Finxol Blog',
         description:
-            'Découvrez des articles et des write-up sur la technologie, la sécurité et plus encore.',
-        sidenote: "Les articles ne sont peut-être pas disponibles dans les deux langues.",
+            'Des articles et write-up sur la technologie, la sécurité et plus encore.',
+        sidenote: "Tous les articles ne sont peut-être pas disponibles dans les deux langues.",
     },
     contribute: {
         title: 'Contributeurs',
