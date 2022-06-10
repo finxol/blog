@@ -43,7 +43,7 @@ Au départ, on se retrouve devant une page comportant un pavé numérique où l'
 Dans l'onglet "Débugger", on remarque tout de suite un fichier javascript nommé `index.js`.
 Après une lecture rapide, on se rend compte qu'il s'agit de la partie qui contrôle le pavé numérique.
 
-On trouve alors plusieurs endroits qui serviraient à valider un code entrer.
+On trouve alors plusieurs endroits qui serviraient à valider un code entré.
 Autour de la ligne 129, on trouve une alternative qui réagit à un appui de touche du clavier.
 
 ```javascript
