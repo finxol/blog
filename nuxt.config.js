@@ -10,7 +10,7 @@ const settings = {
     twitterUsername: '_finxol',
     linkedinUsername: '',
 
-    logo: 'logo.png',
+    logo: '/logo.png',
 
     footerLinks: {
         discover: [
