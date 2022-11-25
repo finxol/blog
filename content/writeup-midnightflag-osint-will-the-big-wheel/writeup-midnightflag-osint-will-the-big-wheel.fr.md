@@ -1,6 +1,6 @@
 ---
 title: MidnightFlag CTF Write-Up Will the big wheel
-description: Write-up du challenge web Will the big wheel du MidnightFlag CTF 2022
+description: Write-up du challenge OSINT Will the big wheel au MidnightFlag CTF 2022
 image: /blog/infektionctf.png
 publishedAt: 2022-04-24
 authors:
@@ -24,7 +24,7 @@ Nos services de renseignements viennent de recevoir un message d'un de nos agent
 nous devons rapidement le retrouver pour l'exfiltrer.
 Votre mission est de décoder son message et de nous renvoyer le lieu d'extraction.
 
-Format : MCTF{hashMD5}
+Format : MCTF{hashMD5}<br>
 Auteur: **A0d3n**
 
 ![Will the Big Wheel](/blog/writeup-midnightflag-osint-will-the-big-wheel/MessageRecover.png)

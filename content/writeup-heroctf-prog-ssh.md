@@ -1,6 +1,6 @@
 ---
 title: HeroCTF Write-Up SSHs
-description: Write-up of the SSHs challenge at HeroCTF 2022
+description: Write-up du challenge de programmation SSHs au HeroCTF 2022
 image: /blog/heroctf.jpg
 publishedAt: 2022-05-30
 authors:
@@ -68,7 +68,9 @@ sshpass -p password123 ssh user1@chall.heroctf.fr -p 10045 "./getSSHKey" 1> id1
 for i in {2..249}
 do
 	prev=id$(expr $i - 1)
+	# Set the correct permissions for the ssh key
 	chmod 600 $prev
+	# Retrieve the next ssh key
 	ssh -i "${prev}" user${i}@chall.heroctf.fr -p 10045 "./getSSHKey" 1> id${i}
 done
 
