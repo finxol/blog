@@ -27,7 +27,7 @@ const settings = {
             {
                 key: 'footer.links.help.resources',
                 href: 'https://github.com/finxol/blog'
-            },
+            }
         ]
     }
 }
