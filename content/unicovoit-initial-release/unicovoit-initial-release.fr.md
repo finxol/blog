@@ -2,7 +2,7 @@
 title: Première version d'UniCovoit !
 description: Après quatre mois et demi, d'innombrables heures de travail et 872 commits, l'application de covoiturage faite pour les étudiants par les étudiants est enfin sortie !
 image: /blog/unicovoit.png
-publishedAt: 2022-08-04
+publishedAt: 2022-09-04
 authors:
   - name: finxol
     avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
