@@ -21,7 +21,7 @@ Pour tous les lecteurs non-européens, cet article est principalement destiné a
 lire les deux premières parties pour en savoir plus sur le RGPD.
 Vous n'êtes pas directement concerné par cette initiative, mais elle a donné naissance à d'autres lois sur la protection
 des données, comme
-le [https://www.tomsguide.fr/lentree-en-vigueur-de-la-california-consumer-privacy-act-aux-etats-unis](Consumer Privacy Act en Californie).
+le [Consumer Privacy Act en Californie](https://www.tomsguide.fr/lentree-en-vigueur-de-la-california-consumer-privacy-act-aux-etats-unis).
 
 ## Qu'est-ce que le RGPD ?
 
