@@ -19,10 +19,6 @@ useHead({
 
 const nav = ref([
     {
-        title: "Home",
-        to: "/",
-    },
-    {
         title: "About",
         to: "/about",
     },
@@ -69,12 +65,12 @@ const pageBackground = ref("bg-stone-100");
         ]">
             <header :class="[
                 'border-b-2 border-stone-200',
-                'py-8 px-6',
+                'py-8',
                 'flex justify-between',
             ]">
                 <div class="flex items-center gap-6">
                     <img src="/logo.png" alt="Logo" class="h-8" />
-                    <NuxtLink to="/" class="text-2xl">finxol's blog</NuxtLink>
+                    <NuxtLink to="/" class="text-2xl font-medium">finxol's blog</NuxtLink>
                 </div>
 
                 <div class="flex items-center gap-8">
@@ -100,8 +96,9 @@ const pageBackground = ref("bg-stone-100");
                 'flex justify-between',
             ]">
                 <p>
-                    &copy; finxol -
+                    &copy;
                     {{ date.getFullYear() }}
+                    finxol
                 </p>
                 <button :class="['text-gray-400', 'font-light']" @click="scrollToTop">
                     Back to top

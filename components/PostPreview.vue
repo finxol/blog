@@ -13,7 +13,6 @@ const { post } = toRefs(props)
         'rounded-lg',
         'border border-neutral-200',
         'px-6 py-4',
-        'mb-4',
         'flex flex-col justify-between',
     ]">
         <h1 class="text-2xl font-bold text-neutral-900">

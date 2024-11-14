@@ -1,6 +1,6 @@
 ---
 title: MidnightFlag CTF Write-Up Will the big wheel
-description: Write-up of the OSINT challenge Will the big wheel at 404CTF 2022
+description: Write-up for the OSINT challenge "Will the big wheel" @ 404CTF 2022
 image: /blog/infektionctf.png
 date: 2022-04-24
 authors:

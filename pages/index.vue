@@ -1,4 +1,7 @@
 <script setup>
+useHead({
+  title: "finxol's blog",
+})
 </script>
 
 <template>

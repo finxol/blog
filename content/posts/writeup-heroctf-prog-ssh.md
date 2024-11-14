@@ -1,6 +1,6 @@
 ---
 title: HeroCTF Write-Up SSHs
-description: Write-up du challenge de programmation SSHs au HeroCTF 2022
+description: Write-up for the programming challenge "SSHs" @ HeroCTF 2022
 image: /blog/heroctf.jpg
 date: 2022-05-30
 authors:
