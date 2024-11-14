@@ -87,9 +87,7 @@ const pageBackground = ref("bg-stone-100");
                     </div>
                 </div>
             </header>
-            <div>
-                <NuxtPage />
-            </div>
+            <NuxtPage />
             <footer :class="[
                 'border-t-2 border-stone-200',
                 'p-4',
