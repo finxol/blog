@@ -2,11 +2,9 @@
 title: 404CTF Write-Up À l'aube d'un échange
 description: Write-up of the OSINT challenge À l'aube d'un échange at 404CTF 2022
 image: /blog/404ctf.png
-publishedAt: 2022-06-08
+date: 2022-06-08
 authors:
-  - name: Finxol
-    avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
-    link: https://github.com/finxol
+  - name: finxol
 tags:
   - writeup
   - 404ctf

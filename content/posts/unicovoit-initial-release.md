@@ -2,11 +2,9 @@
 title: UniCovoit's intial release!
 description: After four and half months, countless hours of work and 872 commits, the carpool app made for students by students is finally out!
 image: /blog/unicovoit.png
-publishedAt: 2022-09-04
+date: 2022-09-04
 authors:
   - name: finxol
-    avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
-    link: https://github.com/finxol
 tags:
   - Launch
   - Release

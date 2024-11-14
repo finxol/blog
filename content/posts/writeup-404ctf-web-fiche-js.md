@@ -2,11 +2,9 @@
 title: 404CTF Write-Up Fiché JS
 description: Write-up of the web Fiché JS challenge at 404CTF 2022
 image: /blog/404ctf.png
-publishedAt: 2022-06-04
+date: 2022-06-04
 authors:
-  - name: Finxol
-    avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
-    link: https://github.com/finxol
+  - name: finxol
 tags:
   - writeup
   - 404ctf

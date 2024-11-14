@@ -2,11 +2,9 @@
 title: All You Need To Know About GDPR
 description: The GDPR, or General Data Protection Regulation, is a series of laws and regulations adopted in May 2016 by the European Parliament and Council to enable European Union citizens to have better control over their data online. It has been in effect from 25 May 2018.
 image: /blog/european_union_padlock.png
-publishedAt: 2020-11-15
+date: 2020-11-15
 authors:
   - name: finxol
-    avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
-    link: https://github.com/finxol
 tags:
   - GDPR
   - Thoughts

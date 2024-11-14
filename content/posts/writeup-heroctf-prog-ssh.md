@@ -2,11 +2,9 @@
 title: HeroCTF Write-Up SSHs
 description: Write-up du challenge de programmation SSHs au HeroCTF 2022
 image: /blog/heroctf.jpg
-publishedAt: 2022-05-30
+date: 2022-05-30
 authors:
-  - name: Finxol
-    avatarUrl: https://avatars.githubusercontent.com/u/71637999?v=4
-    link: https://github.com/finxol
+  - name: finxol
 tags:
   - writeup
   - HeroCTF
@@ -57,14 +55,14 @@ With this information, we can now write a simple bash script to automate the ret
 The use of `sshpass` instead of the plain old `ssh` for the first login enables us to give the password
 directly as a command argument instead of being prompted to enter it manually.<br>
 The use of `1>` at the end of each command redirects the standard output (stdout not stderr) to a specified file;
-here the file is used to save the key. 
+here the file is used to save the key.
 
 ```bash
 # Log into the first user and save the key of the next user to a file named id1
 sshpass -p password123 ssh user1@chall.heroctf.fr -p 10045 "./getSSHKey" 1> id1
 
 # For each user, log in using the previously fetched key, and save the next key in a file name idX,
-# where X is the number of the current iteration 
+# where X is the number of the current iteration
 for i in {2..249}
 do
 	prev=id$(expr $i - 1)

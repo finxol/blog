@@ -1,27 +1,36 @@
-# nuxt-blog
+# Content v2 Minimal Starter
+
+Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 
 ## Setup
 
-Install dependencies:
+Make sure to install the dependencies:
 
 ```bash
-yarn install
+# bun
+bun install
 ```
 
-## Development
+## Development Server
+
+Start the development server on http://localhost:3000
 
 ```bash
-yarn dev
+bun run dev
 ```
 
-## Static Generation
+## Production
 
-This will create the `dist/` directory for publishing to static hosting:
+Build the application for production:
 
 ```bash
-yarn generate
+bun run build
 ```
 
-To preview the static generated app, run `yarn start`
+Locally preview production build:
 
-For detailed explanation on how things work, checkout the [docs](https://nuxtjs.blog).
+```bash
+bun run preview
+```
+
+Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
