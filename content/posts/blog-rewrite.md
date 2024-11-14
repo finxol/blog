@@ -9,4 +9,8 @@ tags:
   - rants
 ---
 
-I never was fully satisfied by
+I never was never quite satisfied by how my blog looked and felt.
+When I first set it up I didn't want to bother much with it so I took the first template I found in a language and framework I knew: Nuxt.js.
+Spoiler: I went for Nuxt again, but for different reasons this time.
+
+I

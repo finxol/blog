@@ -40,14 +40,14 @@
                         <div class="bg-stone-200 h-[1px] my-4"></div>
 
                         <p
-                            class="text-md text-neutral-500 leading-7 mb-8"
+                            class="text-md text-neutral-500 leading-7 mb-8 text-justify md:w-[80%] mx-auto"
                         >
                             {{ data.description }}
                         </p>
                     </header>
 
                     <div class="bg-stone-200 h-[1px] my-8"></div>
-                    <ContentDoc :path="data._path" class="prose prose-lg prose-slate max-w-none mx-auto" />
+                    <ContentDoc :path="data._path" class="prose prose-lg leading-7 prose-slate text-justify md:w-[80%] mx-auto" />
                 </main>
             </template>
             <template #not-found>

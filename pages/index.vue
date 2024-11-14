@@ -10,7 +10,6 @@ useHead({
         <p class="text-lg mt-6">
             My name is Colin Ozanne, known online as finxol. I am a French and British software
             developer and CS student at Université de Rennes.
-            <br /><br /><br />
         </p>
 
         <h2 class="text-2xl font-bold mt-6">
