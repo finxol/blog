@@ -44,9 +44,7 @@ For example: if the street is Avenue de Saint-Mandé in Paris, the correct flag 
 
 Author : **Artamis**
 
-<a href="/blog/writeup-404ctf-osint-aube-d-un-echange/Lieu.jpg" target="_blank" rel="noopener noreferrer">
-    <img src="/blog/writeup-404ctf-osint-aube-d-un-echange/Lieu.jpg" width="50%">
-</a>
+![Place to find](/posts/writeup-404ctf-osint-aube-d-un-echange/Lieu.jpg)
 
 
 ## Solution
@@ -62,23 +60,23 @@ Before going further, we will assume that this is a French city and look for a l
 We then come across the Wikipedia page on [France's tallest skyscrapers](https://fr.wikipedia.org/wiki/Liste_des_plus_hauts_gratte-ciel_de_France).
 Looking at the images associated with the towers, we notice that the third one looks remarkably similar to the one in our photo.
 
-![Liste des plus hauts gratte-ciel de France](/blog/writeup-404ctf-osint-aube-d-un-echange/wiki_liste_gratte_ciel.png)
+![Liste des plus hauts gratte-ciel de France](/posts/writeup-404ctf-osint-aube-d-un-echange/wiki_liste_gratte_ciel.png)
 
 By simply reading the Wikipedia description of the Tour Incity, we find a link to the Part-Dieu district page.
 Fortunately for us, the viewpoint of the description image is very similar to the one of our photo.
 The description also states that this photo was taken "from Fourvière".
 
-![Page Wikipédia de la Part-Dieu](/blog/writeup-404ctf-osint-aube-d-un-echange/wiki_part_dieu.png)
+![Page Wikipédia de la Part-Dieu](/posts/writeup-404ctf-osint-aube-d-un-echange/wiki_part_dieu.png)
 
 We can now start to search with [Google Earth](https://earth.google.com/web/@45.7589869,4.82472116,199.71703945a,1402.6169008d,35y,9.91010942h,69.22260348t,0r) for places around Fourvière or further west,
 probably higher than the rest of the city.
 We can then see that the Fourvière district is located on a hill.
 
-![Quartier de Fourvière Google Earth](/blog/writeup-404ctf-osint-aube-d-un-echange/google_earth_fourviere.png)
+![Quartier de Fourvière Google Earth](/posts/writeup-404ctf-osint-aube-d-un-echange/google_earth_fourviere.png)
 
 Exploring the surroundings, we soon find a building on the East side of the hill which looks like the one in the background of our photo.
 
-![Bâtiment Montée Saint Barthélémy](/blog/writeup-404ctf-osint-aube-d-un-echange/google_earth_montee_st_barth.png)
+![Bâtiment Montée Saint Barthélémy](/posts/writeup-404ctf-osint-aube-d-un-echange/google_earth_montee_st_barth.png)
 
 The street below this building is called the *Montée Saint Barthélémy*.
 We can then format and hash this street name with `echo -n "montee-saint-barthelemy" | md5sum`,

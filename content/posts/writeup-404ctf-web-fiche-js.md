@@ -35,7 +35,7 @@ Author : **Artamis**
 
 At first, we only find a page containing a number pad.
 
-![Landing page](/blog/writeup-404ctf-web-fiche-js/page-web.png)
+![Landing page](/posts/writeup-404ctf-web-fiche-js/page-web.png)
 
 From there, we can open our browser's developer console in order to find what is hidden behind this numpad.
 
@@ -45,7 +45,7 @@ After a quick read, we realise that this is the part that controls the number pa
 There are several places that can be used to validate an entry code.
 Around line 129, there is an alternative that reacts to a key press on the keyboard.
 
-```javascript
+```js
 switch (e.keyCode) {
     case 8:
         backspaceOnPin();
@@ -65,7 +65,7 @@ Once the breakpoint is set, we can simulate a validation by pressing the enter k
 The execution then halts correctly just before the `confirmPin()` function is called.
 We can then do F11, or *Step Into*, which brings us to what looks like a small file.
 
-```javascript
+```js
 /* FONCTIONNEMENT */
 var key = $(".keypad").keypad(function (pin) {
   if (pin == "240801300505131273100172") {
@@ -79,4 +79,4 @@ Indeed, if the code is correct, we are redirected to a supposedly hidden page.
 
 It is indeed on this mystery page that we find the flag, as well as the list of all the agents of Hallebarde.
 
-![Flag](/blog/writeup-404ctf-web-fiche-js/flag.png)
+![Flag](/posts/writeup-404ctf-web-fiche-js/flag.png)
