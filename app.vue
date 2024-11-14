@@ -65,7 +65,7 @@ const pageBackground = ref("bg-stone-100");
             'text-gray-800',
             'min-h-screen max-w-4xl',
             'flex flex-col justify-between',
-            'mx-auto',
+            'mx-auto px-6',
         ]">
             <header :class="[
                 'border-b-2 border-stone-200',

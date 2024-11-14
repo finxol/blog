@@ -1,9 +1,4 @@
 <script setup>
-const { data: posts } = await useAsyncData('posts', () =>
-    queryContent('posts').find()
-)
-// sort the data by date
-posts.value = posts.value.sort((a, b) => new Date(b.date) - new Date(a.date))
 </script>
 
 <template>
@@ -20,7 +15,10 @@ posts.value = posts.value.sort((a, b) => new Date(b.date) - new Date(a.date))
         </h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
-            <PostPreview v-for="post in posts" :key="post._path" :post="post" />
+            <ContentList path="posts" v-slot="{ list }">
+                <PostPreview v-for="post in list.sort((a, b) => new Date(b.date) - new Date(a.date))" :key="post?._path"
+                    :post="post" />
+            </ContentList>
         </div>
     </header>
 </template>
