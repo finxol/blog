@@ -81,7 +81,7 @@ const pageBackground = ref("bg-stone-100");
                     </nav>
 
                     <div class="flex items-center gap-2">
-                        <NuxtLink v-for="link in links" :key="link.title" :to="link.href" target="_blank">
+                        <NuxtLink v-for="link in links" :key="link.title" :to="link.href" target="_blank" :aria-label="link.title">
                             <Icon :name="link.icon" size="2rem" :title="link.title" />
                         </NuxtLink>
                     </div>
@@ -98,10 +98,16 @@ const pageBackground = ref("bg-stone-100");
                     {{ date.getFullYear() }}
                     finxol
                 </p>
-                <button :class="['text-gray-400', 'font-light']" @click="scrollToTop">
+                <button :class="['text-gray-600', 'font-light']" @click="scrollToTop">
                     Back to top
                 </button>
             </footer>
         </div>
     </div>
 </template>
+
+<style>
+body {
+    @apply bg-stone-100;
+}
+</style>

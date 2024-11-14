@@ -19,11 +19,11 @@ const { post } = toRefs(props)
             {{ post.title }}
         </h1>
         <p :class="[
-            'text-neutral-600',
+            'text-neutral-700',
             'my-4',
         ]">
             {{ post.description }}
-            <span class="text-neutral-500 font-light hover:text-primary-600">
+            <span class="text-neutral-600 font-light hover:text-primary-600">
                 Read more.
             </span>
         </p>

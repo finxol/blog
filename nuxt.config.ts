@@ -9,6 +9,14 @@ export default defineNuxtConfig({
     "@nuxt/icon",
   ],
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
+
   typescript: {
     typeCheck: true,
   },
