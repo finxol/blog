@@ -9,7 +9,7 @@
             class="flex items-center gap-1 text-sm text-neutral-600 hover:text-neutral-900 mt-4"
             @click="$router.back()"
         >
-            <Icon name="tabler:chevron-left" />
+            <Icon name="ri:arrow-drop-left-line" />
             Go back
         </button>
         <ContentQuery :path="$route.path" find="one">

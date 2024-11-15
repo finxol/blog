@@ -27,7 +27,7 @@ I was also motivated by the fact that I had to isolate for a week after testing 
 Though times, they were...
 
 During that week, I spent basically every woken hour learning how to use Nuxt 2 and Vuetify.
-I chose these technologies for the very simple reason that someone at my university had used them extensively to build a website to access our timetables easier, which meant I had a exit strategy in case I got hopelessly stuck.
+I chose these technologies for the very simple reason that someone at my university had used them extensively to build a website to access our timetables easier, which meant I had an exit strategy in case I got hopelessly stuck.
 I've got to say that was a pretty good idea for the beginning, it came in handy a couple times.
 
 When I finally got out, I continued working on the project, just not so intensively.
