@@ -15,6 +15,8 @@ _Spoiler: I went for Nuxt again, but for different reasons this time._
 
 ## Version one was not good
 
+If you're curious, I'm keeping the original version up and running for a bit on [v1.finxol.io](https://v1.finxol.io/)
+
 The starter package I used to get my blog up and running was [some random npm package](https://www.npmjs.com/package/@jsilva-pt/nuxt-content-theme-blog)
 I found god knows where that's barely maintained.
 Last published version was _4 years ago_, which means it was already 2 years old when I used it.
@@ -38,7 +40,7 @@ It has to:
 1. Accept markdown.
   I don't want to have to rewrite all my (6) previous blog posts.
 2. Customisable — _to some extent_.
-  I'm after a simple theme, but I want to have things like links in the nav bar, a list of posts on the home page, and an about page.
+  I'm after a simple theme, but I want to have things like external links in the nav bar, a list of posts on the home page, and an about page.
   I don't consider these to be unreasonable asks — _please let me know if any of these sound outrageous._
 3. Not TOO hard to setup.
   I'll get to it in a minute, but some "easy" options are a nightmare to customise properly.
@@ -92,10 +94,10 @@ Looking at it again now, it doesn't seem very customisable, if at all, so I supp
 
 Next one I tried was VitePress. I'd barely heard of that one before, only in passing, but it's built on Vue, which I really like and know decently well.
 
-It's supposed to be rather built for documentation websites, but I came accross a few tutorials on how to make a blog out of it,
+It's supposed to be built rather for documentation websites, but I came accross a few tutorials on how to make a blog out of it,
 so I tried that one out.
 
-Turns out I couldn't break free from the default "docs" style template—even though I quite liked it visually,
+Turns out I couldn't break free from the default "docs" style template — even though I quite liked it visually,
 so that's a no go.
 
 #### Nuxt (again)
