@@ -129,4 +129,4 @@ And that's some pretty damn good results from PageSpeed Insight.
 ## Publish it as a blog starter
 
 I want to help out the comunity along the way, so I'll adjust a few things to make it into a template repo to use as a starter,
-in case anyone out there is looking to build a simple blog
+in case anyone out there is looking to build a simple markdown blog with Nuxt.
