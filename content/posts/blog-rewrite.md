@@ -80,7 +80,7 @@ I managed to find one that was close enough to what I wanted, but I really strug
 
 #### Deno blog
 
-Lately, I've been using and loving Deno quite a bit, so when I saw \*the\* Deno guy's blog was built with a [simple Deno lib](https://deno.land/x/blog@0.7.0),
+Lately, I've been using and loving Deno quite a bit, so when I saw [\*the\* Deno guy's](https://tinyclouds.org/) blog was built with a [simple Deno lib](https://deno.land/x/blog@0.7.0),
 I had to try it out.
 
 Much to my disappointment, it didn't work with the current version of Deno.
