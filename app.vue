@@ -66,14 +66,14 @@ const pageBackground = ref("bg-stone-100");
             <header :class="[
                 'border-b-2 border-stone-200',
                 'py-8',
-                'flex justify-between',
+                'flex justify-between align-center',
             ]">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 sm:gap-6">
                     <img src="/logo.png" alt="Logo" class="h-8" />
-                    <NuxtLink to="/" class="text-2xl font-medium">finxol's blog</NuxtLink>
+                    <NuxtLink to="/" class="text-xl leading-5 sm:text-2xl font-medium">finxol's blog</NuxtLink>
                 </div>
 
-                <div class="flex items-center gap-8">
+                <div class="flex items-center gap-4 sm:gap-8">
                     <nav :class="['flex items-start gap-4', 'text-gray-800', 'font-semibold']">
                         <NuxtLink v-for="item in nav" :key="item.to" :to="item.to">
                             {{ item.title }}
