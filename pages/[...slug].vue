@@ -6,7 +6,7 @@
         class="grow"
     >
         <button
-            class="flex items-center gap-1 text-sm text-neutral-600 hover:text-neutral-900 mt-4"
+            class="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 mt-4"
             @click="$router.back()"
         >
             <Icon name="ri:arrow-drop-left-line" />
@@ -19,16 +19,16 @@
                         <h1 class="text-4xl font-bold">
                             {{ data?.title }}
                         </h1>
-                        <div class="flex items-center justify-start gap-4 mt-4">
+                        <div class="flex items-center justify-start gap-4 mt-4 text-neutral-600 dark:text-neutral-300">
                             <div v-if="data.authors" class="flex items-center gap-1">
                                 <img v-if="data.authors[0].name === 'finxol'" src="/logo.png" :alt="data.authors[0].name"
                                     class="w-8 h-8 rounded-full mr-2">
-                                <span v-for="author in data.authors" :key="author.name" class="text-neutral-600">
+                                <span v-for="author in data.authors" :key="author.name">
                                     {{ author.name }}
                                 </span>
                             </div>
                             ·
-                            <span class="text-neutral-600">
+                            <span>
                                 {{ new Date(data.date).toLocaleDateString('en-GB', {
                                     year: 'numeric',
                                     month: 'long',
@@ -37,17 +37,17 @@
                             </span>
                         </div>
 
-                        <div class="bg-stone-200 h-[1px] my-4"></div>
+                        <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-4"></div>
 
                         <p
-                            class="text-md text-neutral-500 leading-7 mb-8 text-justify md:w-[80%] mx-auto"
+                            class="text-md text-neutral-500 dark:text-neutral-400 leading-7 my-8 text-justify md:w-[80%] mx-auto"
                         >
                             {{ data.description }}
                         </p>
                     </header>
 
-                    <div class="bg-stone-200 h-[1px] my-8"></div>
-                    <ContentDoc :path="data._path" class="prose prose-lg leading-7 prose-slate text-justify md:w-[80%] mx-auto" />
+                    <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-8 md:w-[80%] mx-auto"></div>
+                    <ContentDoc :path="data._path" class="prose prose-lg leading-7 prose-slate text-justify md:w-[80%] mx-auto text-neutral-700 dark:text-neutral-200" />
                 </main>
             </template>
             <template #not-found>

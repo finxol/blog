@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { useDark, useToggle } from '@vueuse/core'
+
+const pageBackground = ref("bg-stone-100 dark:bg-neutral-900");
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+
 useHead({
     title: "finxol's blog",
     meta: [
@@ -15,6 +22,9 @@ useHead({
             content: "@finxol@mas.to",
         },
     ],
+    bodyAttrs: {
+        class: pageBackground,
+    },
 });
 
 const nav = ref([
@@ -50,21 +60,19 @@ function scrollToTop() {
         behavior: "smooth",
     });
 }
-
-const pageBackground = ref("bg-stone-100");
 </script>
 
 <template>
     <div :class="`min-h-screen min-w-screen ${pageBackground}`">
         <div :class="[
             pageBackground,
-            'text-gray-800',
+            'text-gray-800 dark:text-gray-300',
             'min-h-screen max-w-4xl',
             'flex flex-col justify-between',
             'mx-auto px-6',
         ]">
             <header :class="[
-                'border-b-2 border-stone-200',
+                'border-b-2 border-stone-200 dark:border-stone-800',
                 'py-8',
                 'flex justify-between align-center',
             ]">
@@ -74,7 +82,14 @@ const pageBackground = ref("bg-stone-100");
                 </div>
 
                 <div class="flex items-center gap-4 sm:gap-8">
-                    <nav :class="['flex items-start gap-4', 'text-gray-800', 'font-semibold']">
+                    <div
+                        class="cursor-pointer"
+                        @click="toggleDark()"
+                    >
+                        <Icon v-if="isDark" name="ri:sun-fill" size="1.5rem" />
+                        <Icon v-else name="ri:moon-fill" size="1.5rem" />
+                    </div>
+                    <nav :class="['flex items-start gap-4', 'text-gray-800 dark:text-gray-200', 'font-semibold']">
                         <NuxtLink v-for="item in nav" :key="item.to" :to="item.to">
                             {{ item.title }}
                         </NuxtLink>
@@ -89,7 +104,7 @@ const pageBackground = ref("bg-stone-100");
             </header>
             <NuxtPage />
             <footer :class="[
-                'border-t-2 border-stone-200',
+                'border-t-2 border-stone-200 dark:border-stone-800',
                 'p-4',
                 'flex justify-between',
             ]">
@@ -98,16 +113,10 @@ const pageBackground = ref("bg-stone-100");
                     {{ date.getFullYear() }}
                     finxol
                 </p>
-                <button :class="['text-gray-600', 'font-light']" @click="scrollToTop">
+                <button :class="['text-gray-600 dark:text-gray-300', 'font-light']" @click="scrollToTop">
                     Back to top
                 </button>
             </footer>
         </div>
     </div>
 </template>
-
-<style>
-body {
-    @apply bg-stone-100;
-}
-</style>

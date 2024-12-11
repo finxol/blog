@@ -8,7 +8,7 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === '
 </script>
 
 <template>
-  <h2 :id="props.id">
+  <h2 :id="props.id" class="prose-headings dark:invert dark:hue-rotate-180">
     <a
       v-if="props.id && generate"
       :href="`#${props.id}`"
