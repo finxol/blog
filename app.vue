@@ -86,8 +86,8 @@ function scrollToTop() {
                         class="cursor-pointer"
                         @click="toggleDark()"
                     >
-                        <Icon v-if="isDark" name="ri:sun-fill" size="1.5rem" />
-                        <Icon v-else name="ri:moon-fill" size="1.5rem" />
+                        <Icon v-if="isDark" name="ri:sun-fill" size="1.5rem" mode="svg" />
+                        <Icon v-else name="ri:moon-fill" size="1.5rem" mode="svg" />
                     </div>
                     <nav :class="['flex items-start gap-4', 'text-gray-800 dark:text-gray-200', 'font-semibold']">
                         <NuxtLink v-for="item in nav" :key="item.to" :to="item.to">
