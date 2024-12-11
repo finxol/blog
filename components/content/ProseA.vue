@@ -2,7 +2,6 @@
   <NuxtLink
     :href="props.href"
     :target="props.target"
-    class="prose-link dark:invert dark:hue-rotate-180"
   >
     <slot />
   </NuxtLink>

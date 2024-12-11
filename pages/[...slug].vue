@@ -47,7 +47,7 @@
                     </header>
 
                     <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-8 md:w-[80%] mx-auto"></div>
-                    <ContentDoc :path="data._path" class="prose prose-lg leading-7 prose-slate text-justify md:w-[80%] mx-auto text-neutral-700 dark:text-neutral-200" />
+                    <ContentDoc :path="data._path" class="prose prose-lg leading-7 prose-slate dark:prose-invert text-justify md:w-[80%] mx-auto" />
                 </main>
             </template>
             <template #not-found>
