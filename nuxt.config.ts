@@ -17,6 +17,20 @@ export default defineNuxtConfig({
         },
     },
 
+    icon: {
+        // Bundle frequently used icons in client bundle
+        clientBundle: {
+            icons: [
+                "ant-design:github-filled",
+                "ri:mastodon-fill",
+                "ri:bluesky-fill",
+                "ri:sun-fill",
+                "ri:moon-fill",
+            ],
+            scan: true,
+        },
+    },
+
     typescript: {
         typeCheck: true,
     },
