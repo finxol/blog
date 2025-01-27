@@ -8,7 +8,7 @@ Make sure to install the dependencies:
 
 ```bash
 # bun
-bun install
+deno install --allow-scripts
 ```
 
 ## Development Server
@@ -16,7 +16,7 @@ bun install
 Start the development server on http://localhost:3000
 
 ```bash
-bun run dev
+deno task dev
 ```
 
 ## Production
@@ -24,13 +24,13 @@ bun run dev
 Build the application for production:
 
 ```bash
-bun run build
+deno task build
 ```
 
 Locally preview production build:
 
 ```bash
-bun run preview
+deno task preview
 ```
 
 Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
