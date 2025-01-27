@@ -1,44 +1,41 @@
-name: Deploy
+# https://github.com/actions/deploy-pages#usage
+name: Deploy to GitHub Pages
 on:
+  workflow_dispatch:
   push:
-    branches: main
-  pull_request:
-    branches: main
-
+    branches:
+      - main
 jobs:
-  deploy:
-    name: Deploy
+  build:
     runs-on: ubuntu-latest
-
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
-
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: oven-sh/setup-bun@v2
         with:
-          deno-version: v2.x
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+          bun-version: latest
+      # Pick your own package manager and build script
+      - run: bun install
+      - run: bun x nuxt build --preset github_pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: lts/*
-
-      - name: Install step
-        run: "deno install"
-
-      - name: Build step
-        run: "NITRO_PRESET=deno-deploy deno task build"
-
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "finxol-blog"
-          entrypoint: "server/index.ts"
-          root: ".output"
-          
-          
+          path: ./.output/public
+  # Deployment job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    # Deploy to the github_pages environment
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
