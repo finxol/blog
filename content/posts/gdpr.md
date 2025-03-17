@@ -8,6 +8,7 @@ authors:
 tags:
   - GDPR
   - Thoughts
+published: true
 ---
 
 The GDPR, or General Data Protection Regulation, is a series of laws and regulations adopted in May 2016 by the European

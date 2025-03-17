@@ -77,7 +77,7 @@ function scrollToTop() {
                 'flex justify-between align-center',
             ]">
                 <div class="flex items-center gap-4 sm:gap-6">
-                    <img src="/logo.png" alt="Logo" class="h-8" />
+                    <img src="/logo.png" alt="Logo" class="hidden sm:block h-8" />
                     <NuxtLink to="/" class="text-xl leading-5 sm:text-2xl font-medium">finxol's blog</NuxtLink>
                 </div>
 

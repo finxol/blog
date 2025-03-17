@@ -9,7 +9,7 @@ tags:
   - writeup
   - 404ctf
   - OSINT
-
+published: true
 ---
 
 ## 404CTF

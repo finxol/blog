@@ -9,7 +9,7 @@ const { post } = toRefs(props)
 </script>
 
 <template>
-    <NuxtLink v-if="post !== undefined" :to="post?._path" :class="[
+    <NuxtLink v-if="post !== undefined" :to="post.path" :class="[
         'rounded-lg',
         'border border-neutral-200 dark:border-neutral-700',
         'px-6 py-4',

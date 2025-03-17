@@ -9,7 +9,7 @@ tags:
   - writeup
   - 404ctf
   - web
-
+published: true
 ---
 
 ## 404CTF

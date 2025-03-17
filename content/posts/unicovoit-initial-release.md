@@ -9,6 +9,7 @@ tags:
   - Launch
   - Release
   - UniCovoit
+published: true
 ---
 
 I often use carpooling applications to get home to my parents.

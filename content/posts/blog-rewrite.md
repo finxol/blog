@@ -7,6 +7,7 @@ authors:
 tags:
   - code
   - rants
+published: true
 ---
 
 I never was never quite satisfied by how my blog looked and felt.

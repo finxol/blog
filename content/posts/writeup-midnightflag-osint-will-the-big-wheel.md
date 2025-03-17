@@ -9,7 +9,7 @@ tags:
   - writeup
   - MidnightFlagCTF
   - OSINT
-
+published: true
 ---
 
 ## 404CTF

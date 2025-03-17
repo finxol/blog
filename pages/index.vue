@@ -1,7 +1,15 @@
-<script setup>
+<script setup lang="ts">
 useHead({
   title: "finxol's blog",
 })
+
+const { data } = await useAsyncData('navigation', () => {
+  return queryCollectionNavigation('posts', [ "path", "title", "date", "description", "authors"])
+    .where('published', '=', true)
+    .order('date', 'DESC')
+})
+
+const posts = data.value ? data.value[0]?.children : []
 </script>
 
 <template>
@@ -16,11 +24,13 @@ useHead({
             Posts
         </h2>
 
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
-            <ContentList path="posts" v-slot="{ list }">
-                <PostPreview v-for="post in list.sort((a, b) => new Date(b.date) - new Date(a.date))" :key="post?._path"
-                    :post="post" />
-            </ContentList>
+            <PostPreview
+                v-for="post in posts"
+                :key="post.path"
+                :post="post"
+            />
         </div>
     </header>
 </template>

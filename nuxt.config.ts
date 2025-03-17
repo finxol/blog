@@ -39,5 +39,5 @@ export default defineNuxtConfig({
         "/": { prerender: true },
     },
 
-    compatibilityDate: "2025-01-09",
+    compatibilityDate: "2025-03-17",
 });
