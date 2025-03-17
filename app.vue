@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useDark, useToggle } from '@vueuse/core'
 
+const route = useRoute()
+
 const pageBackground = ref("bg-stone-100 dark:bg-neutral-900");
 
 const isDark = useDark()
@@ -36,7 +38,7 @@ const nav = ref([
 
 const links = ref([
     {
-        icon: "ant-design:github-filled",
+        icon: "ri:github-fill",
         title: "GitHub",
         href: "https://github.com/finxol",
     },
@@ -55,6 +57,7 @@ const links = ref([
 const date: Date = new Date();
 
 function scrollToTop() {
+    console.log("scrolling to top");
     window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -113,8 +116,19 @@ function scrollToTop() {
                     {{ date.getFullYear() }}
                     finxol
                 </p>
-                <button :class="['text-gray-600 dark:text-gray-300', 'font-light']" @click="scrollToTop">
+
+                <HitCount :page="route.path" />
+
+                <button
+                    :class="[
+                        'text-gray-600 dark:text-gray-300',
+                        'font-light',
+                        'flex items-center gap-1',
+                    ]"
+                    @click="() => {scrollToTop()}"
+                >
                     Back to top
+                    <Icon name="ri:arrow-up-s-line" size="1rem" mode="svg" />
                 </button>
             </footer>
         </div>

@@ -11,6 +11,7 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
+        "@deno/kv": "^0.10.0",
         "@nuxt/content": "3.3.0",
         "@nuxt/icon": "1.11.0",
         "@nuxt/image": "1.9.0",
@@ -22,7 +23,6 @@
         "vue-router": "^4.5.0"
     },
     "devDependencies": {
-        "@iconify-json/ant-design": "^1.2.5",
         "@iconify-json/ri": "^1.2.5",
         "simple-analytics-vue": "^3.0.2",
         "typescript": "^5.8.2",
