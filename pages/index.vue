@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import process from "node:process"
+
 useHead({
   title: "finxol's blog",
 })
