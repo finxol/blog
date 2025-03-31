@@ -26,7 +26,7 @@ useSeoMeta({
         </button>
         <article
             v-if="post"
-            class="pb-12"
+            class="pb-24"
         >
             <header class="mb-8 mt-4">
                 <h1 class="text-4xl font-bold">
