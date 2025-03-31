@@ -18,7 +18,6 @@ export default defineNuxtConfig({
     },
 
     icon: {
-        // Bundle frequently used icons in client bundle
         clientBundle: {
             icons: [
                 "ant-design:github-filled",
@@ -37,6 +36,8 @@ export default defineNuxtConfig({
 
     routeRules: {
         "/": { prerender: true },
+        "/about": { prerender: true },
+        "/posts/**": { prerender: true },
     },
 
     compatibilityDate: "2025-03-17",
