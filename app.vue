@@ -126,6 +126,7 @@ function scrollToTop() {
 <style>
 @import "assets/fonts/orkney/orkney.css";
 @import "assets/fonts/recoleta/recoleta.css";
+@import "assets/fonts/ibm-plex-mono/css/ibm-plex-mono-all.min.css";
 
 body {
     font-family: 'OrkneyRegular', sans-serif;
@@ -133,5 +134,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'recoleta-regular', serif;
+}
+
+code, pre {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
 }
 </style>
