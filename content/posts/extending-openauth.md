@@ -10,4 +10,4 @@ tags:
 published: false
 ---
 
-I like OpenAuth
+If you haven't already heard of it, OpenAuth is a pretty new open-source authentication library.

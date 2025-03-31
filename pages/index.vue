@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import process from "node:process"
-
 useHead({
-  title: "finxol's blog",
-})
+	title: "finxol's blog",
+});
 
-const { data } = await useAsyncData('navigation', () => {
-    let query = queryCollectionNavigation('posts', [ "path", "title", "date", "description", "authors"])
+const { data } = await useAsyncData("navigation", () => {
+	return queryCollectionNavigation("posts", [
+		"path",
+		"title",
+		"date",
+		"description",
+		"authors",
+	])
+		.where("published", "=", true)
+		.order("date", "DESC");
+});
 
-    if (process.env.NODE_ENV === 'production') {
-        query = query.where('published', '=', true)
-    }
-
-    return query.order('date', 'DESC')
-})
-
-const posts = data.value ? data.value[0]?.children : []
+const posts = data.value ? data.value[0]?.children : [];
 </script>
 
 <template>

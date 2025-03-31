@@ -1,11 +1,11 @@
 <script setup>
 const props = defineProps({
-    post: {
-        type: Object,
-        required: true
-    }
-})
-const { post } = toRefs(props)
+	post: {
+		type: Object,
+		required: true,
+	},
+});
+const { post } = toRefs(props);
 </script>
 
 <template>
