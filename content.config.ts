@@ -9,7 +9,9 @@ export default defineContentConfig({
         }),
         posts: defineCollection({
             type: "page",
-            source: "posts/**/*.md",
+            source: {
+                include: "posts/**/*.md",
+            },
             schema: z.object({
                 title: z.string(),
                 description: z.string(),

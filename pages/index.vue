@@ -4,9 +4,13 @@ useHead({
 })
 
 const { data } = await useAsyncData('navigation', () => {
-  return queryCollectionNavigation('posts', [ "path", "title", "date", "description", "authors"])
-    .where('published', '=', true)
-    .order('date', 'DESC')
+    let query = queryCollectionNavigation('posts', [ "path", "title", "date", "description", "authors"])
+
+    if (process.env.NODE_ENV === 'production') {
+        query = query.where('published', '=', true)
+    }
+
+    return query.order('date', 'DESC')
 })
 
 const posts = data.value ? data.value[0]?.children : []
