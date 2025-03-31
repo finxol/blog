@@ -12,4 +12,13 @@ module.exports = {
         require("@tailwindcss/typography"),
         // other plugins...
     ],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: "'OrkneyRegular', sans-serif",
+                serif: "'recoleta-regular', serif;",
+                "serif-bold": "'recoleta-bold', serif;",
+            },
+        },
+    },
 };

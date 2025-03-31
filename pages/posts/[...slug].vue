@@ -57,7 +57,7 @@ useSeoMeta({
             </header>
 
             <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-8 md:w-[80%] mx-auto"></div>
-            <ContentRenderer :value="post" class="prose prose-lg leading-7 prose-slate dark:prose-invert text-justify md:w-[80%] mx-auto" />
+            <ContentRenderer :value="post" class="prose prose-lg leading-7 prose-slate dark:prose-invert text-justify md:w-[80%] mx-auto text-zinc-800 dark:text-zinc-200" />
         </article>
 
         <div v-else class="flex items-center justify-center">

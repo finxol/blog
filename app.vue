@@ -78,7 +78,7 @@ function scrollToTop() {
             ]">
                 <div class="flex items-center gap-4 sm:gap-6">
                     <img src="/logo.png" alt="Logo" class="hidden sm:block h-8" />
-                    <NuxtLink to="/" class="text-xl leading-5 sm:text-2xl font-medium">finxol's blog</NuxtLink>
+                    <NuxtLink to="/" class="text-xl leading-5 sm:text-2xl font-medium font-serif-bold">finxol's blog</NuxtLink>
                 </div>
 
                 <div class="flex items-center gap-4 sm:gap-8">
@@ -120,3 +120,16 @@ function scrollToTop() {
         </div>
     </div>
 </template>
+
+<style>
+@import "assets/fonts/orkney/orkney.css";
+@import "assets/fonts/recoleta/recoleta.css";
+
+body {
+    font-family: 'OrkneyRegular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'recoleta-regular', serif;
+}
+</style>

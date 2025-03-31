@@ -12,18 +12,18 @@ const { post } = toRefs(props)
     <NuxtLink v-if="post !== undefined" :to="post.path" :class="[
         'rounded-lg',
         'border border-neutral-200 dark:border-neutral-700',
-        'px-6 py-4',
+        'px-8 py-6',
         'flex flex-col justify-between',
     ]">
         <h1 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
             {{ post.title }}
         </h1>
         <p :class="[
-            'text-neutral-700 dark:text-neutral-200',
+            'text-neutral-500 dark:text-zinc-400',
             'my-4',
         ]">
             {{ post.description }}
-            <span class="text-neutral-600 dark:text-neutral-300 font-light hover:text-primary-600">
+            <span class="text-neutral-400 underline dark:text-neutral-300 font-light hover:text-primary-600">
                 Read more.
             </span>
         </p>
