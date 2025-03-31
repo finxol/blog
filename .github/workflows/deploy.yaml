@@ -29,8 +29,15 @@ jobs:
 
             - run: pnpm generate
 
-            - name: Deploy to Deno Deploy
-              uses: denoland/deployctl@v1
+            - uses: denoland/setup-deno@v2
+              name: Set up Deno
               with:
-                  project: finxol-blog
-                  root: .output/public
+                  deno-version: v2.x
+
+            # Install the deployctl CLI tool
+            - name: Install deployctl
+              run: deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -rfg https://deno.land/x/deploy/deployctl.ts
+
+            # Deploy using the CLI, providing only the project and the root directory
+            - name: Deploy to Deno Deploy via CLI
+              run: deployctl deploy --project=finxol-blog .output/public
