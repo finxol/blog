@@ -7,60 +7,60 @@ const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
 useHead({
-	title: "finxol's blog",
-	meta: [
-		{
-			name: "description",
-			content: "finxol's blog",
-		},
-		{
-			name: "viewport",
-			content: "width=device-width, initial-scale=1",
-		},
-		{
-			name: "fediverse:creator",
-			content: "@finxol@mas.to",
-		},
-	],
-	bodyAttrs: {
-		class: pageBackground,
-	},
+    title: "finxol's blog",
+    meta: [
+        {
+            name: "description",
+            content: "finxol's blog"
+        },
+        {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1"
+        },
+        {
+            name: "fediverse:creator",
+            content: "@finxol@mas.to"
+        }
+    ],
+    bodyAttrs: {
+        class: pageBackground
+    }
 });
 
 const nav = ref([
-	{
-		title: "About",
-		to: "/about",
-	},
+    {
+        title: "About",
+        to: "/about"
+    }
 ]);
 
 const links = ref(
-	[
-		{
-			icon: "ant-design:github-filled",
-			title: "GitHub",
-			href: "https://github.com/finxol",
-		},
-		{
-			icon: "ri:mastodon-fill",
-			title: "Mastodon",
-			href: "https://mas.to/@finxol",
-		},
-		{
-			icon: "ri:bluesky-fill",
-			title: "BlueSky",
-			href: "https://bsky.app/profile/finxol.io",
-		},
-	].reverse(),
+    [
+        {
+            icon: "ant-design:github-filled",
+            title: "GitHub",
+            href: "https://github.com/finxol"
+        },
+        {
+            icon: "ri:mastodon-fill",
+            title: "Mastodon",
+            href: "https://mas.to/@finxol"
+        },
+        {
+            icon: "ri:bluesky-fill",
+            title: "BlueSky",
+            href: "https://bsky.app/profile/finxol.io"
+        }
+    ].reverse()
 );
 
 const date: Date = new Date();
 
 function scrollToTop() {
-	window.scrollTo({
-		top: 0,
-		behavior: "smooth",
-	});
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 </script>
 

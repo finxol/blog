@@ -1,18 +1,18 @@
 <script setup lang="ts">
 useHead({
-	title: "finxol's blog",
+    title: "finxol's blog"
 });
 
 const { data } = await useAsyncData("navigation", () => {
-	return queryCollectionNavigation("posts", [
-		"path",
-		"title",
-		"date",
-		"description",
-		"authors",
-	])
-		.where("published", "=", true)
-		.order("date", "DESC");
+    return queryCollectionNavigation("posts", [
+        "path",
+        "title",
+        "date",
+        "description",
+        "authors"
+    ])
+        .where("published", "=", true)
+        .order("date", "DESC");
 });
 
 const posts = data.value ? data.value[0]?.children : [];

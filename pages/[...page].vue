@@ -1,12 +1,12 @@
 <script setup>
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () =>
-	queryCollection("pages").path(`/pages${route.path}`).first(),
+    queryCollection("pages").path(`/pages${route.path}`).first()
 );
 
 useSeoMeta({
-	title: page.value?.title,
-	description: page.value?.description,
+    title: page.value?.title,
+    description: page.value?.description
 });
 </script>
 
