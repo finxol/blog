@@ -20,6 +20,10 @@ useHead({
         {
             name: "fediverse:creator",
             content: "@finxol@mas.to"
+        },
+        {
+            name: "fediverse:creator",
+            content: "@User038418@mamot.fr"
         }
     ],
     bodyAttrs: {
