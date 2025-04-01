@@ -89,6 +89,16 @@ The one I find particularly interesting is the SQL driver, although still experi
 Building the adapter was simply a case of copy-pasting OpenAuth's `MemoryAdapter` and replacing the `Map` function calls with those of unstorage.
 Very straightforward and automatable stuff.
 
+There was however one slight snag.
+
+When calling `.setItem(key, value)`, the key is used as it is.
+However, when calling `.getKeys(base)`, the base is treated as a prefix and gets normalized, aka. it gets appended a semicolon.
+
+This is a problem for use in OpenAuth.
+The Storage API here has its own `joinKey(key)` method which joins the keys with `String.fromCharCode(0x1f)` as a separator, not a semicolon.
+
+This difference means the keys won't be found when calling `.getKeys(base)`, so for the purposes of OpenAuth, unstorage needs a small patch to remove the semicolon addition for its internal `normalizeBaseKey(base)` function.
+
 Since unstorage opens up a lot of possibilities for storage, I also [opened a PR](https://github.com/toolbeam/openauth/pull/235) for this one.
 
 While I wait for my PRs to be merged, I'm just using both with pnpm patches.
