@@ -30,3 +30,20 @@ const props = defineProps({
     }
 });
 </script>
+
+<style scoped>
+a {
+    transition: background-size .3s ease;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #000, #000);
+    background-repeat: no-repeat;
+    background-size: 100% .5px;
+    background-position: bottom .2ch left;
+}
+
+a:hover {
+    background-size: 0% .5px;
+    background-position: bottom .2ch right;
+}
+
+</style>
