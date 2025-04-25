@@ -24,7 +24,7 @@ const posts = data.value ? data.value[0]?.children : [];
         <p class="text-lg mt-6">
             My name is Colin Ozanne, known online as finxol.
             I am a French and British software developer and CS student at Université de Rennes,
-            currently building <a class="underline" href="https://github.com/finxol/karr">Karr</a>.
+            currently building <a class="underline" href="https://karr.mobi">Karr</a>.
         </p>
 
         <h2 class="text-2xl font-bold my-6">
