@@ -10,7 +10,7 @@ tags:
 published: true
 ---
 
-I'm currently building [Karr](https://github.com/finxol/karr), an open-source federated carpool platform—it's still very early days, not much there yet.
+I'm currently building [Karr](https://karr.mobi/?utm_source=finxol-blog&utm_content=openauth-post), an open-source federated carpool platform—it's still very early days, not much there yet.
 Like basically all apps nowadays, I need an auth system.
 
 The only strong requirement I have is for it to be self-hostable.
