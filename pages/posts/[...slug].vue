@@ -17,13 +17,13 @@ useSeoMeta({
     <div
         class="grow"
     >
-        <button
+        <NuxtLink
             class="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 mt-4"
-            @click="$router.back()"
+            to="/"
         >
             <Icon name="ri:arrow-drop-left-line" mode="svg" />
             Go back
-        </button>
+        </NuxtLink>
         <article
             v-if="post"
             class="pb-24"
@@ -61,6 +61,11 @@ useSeoMeta({
 
             <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-8 md:w-[80%] mx-auto"></div>
             <ContentRenderer :value="post" class="prose prose-lg leading-7 prose-slate dark:prose-invert text-justify md:w-[80%] mx-auto text-zinc-800 dark:text-zinc-200" />
+
+
+
+            <ShareActions :title="post.title" :description="post.description" :author="post.authors[0].name" />
+
         </article>
 
         <div v-else class="flex items-center justify-center">
