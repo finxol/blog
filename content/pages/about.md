@@ -1,6 +1,8 @@
 I'm Colin Ozanne, aka finxol. On this blog I write about tech stuff I find interesting.
 I also have a [travel blog](https://colinswanderlustchronicles.com/) I've written a fair bit for.
 
+If you like how this blog looks and feel, check out the [template repo](https://github.com/finxol/nuxt-blog-template) to make your own blog like this one!
+
 I'm still a student so I don't have heaps to show for myself yet, but some good stuff is yet to come.<br>
 Among the few things I can share, I've built a complete [carpool platform for students](https://github.com/unicovoit/unicovoit).
 
