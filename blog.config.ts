@@ -1,32 +1,34 @@
 import { defineBlogConfig } from "./globals";
 
 export default defineBlogConfig({
-    tableOfContents: true,
-    sharingProviders: ["bluesky", "clipboard", "native"],
-    title: "Template blog",
-    author: "Your name",
+    title: "finxol's blog",
+    author: "finxol",
     meta: [
         {
             name: "description",
-            content: "This is a template blog",
+            content: "finxol's blog",
         },
         {
             name: "fediverse:creator",
-            content: "your fediverse handle",
+            content: "@finxol@mas.to",
+        },
+        {
+            name: "fediverse:creator",
+            content: "@User038418@mamot.fr",
         },
     ],
     links: [
         {
             name: "bluesky",
-            url: "https://bsky.app/profile/yourhandle",
+            url: "https://bluesky.app/profile/finxol.io",
         },
         {
             name: "github",
-            url: "https://github.com/yourusername",
+            url: "https://github.com/finxol",
         },
         {
             name: "mastodon",
-            url: "https://mastodon.social/@yourhandle",
+            url: "https://mas.to/@finxol",
         },
     ],
 });
