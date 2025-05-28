@@ -15,7 +15,7 @@ if (post.value) {
     defineOgImageComponent("Post", {
         title: post.value.title,
         date: post.value.date,
-        author: post.value.authors[0]?.name,
+        author: post.value.authors[0]?.name
     });
 }
 </script>

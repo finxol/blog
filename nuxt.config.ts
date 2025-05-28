@@ -32,12 +32,12 @@ export default defineNuxtConfig({
 
     ogImage: {
         fonts: [
-          {
-            name: 'Recoleta',
-            weight: 700,
-            path: '/fonts/recoleta-bold.ttf',
-          }
-        ],
+            {
+                name: "Recoleta",
+                weight: 700,
+                path: "/fonts/recoleta-bold.ttf"
+            }
+        ]
     },
 
     icon: {
