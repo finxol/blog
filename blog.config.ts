@@ -18,18 +18,9 @@ export default defineBlogConfig({
             content: "@User038418@mamot.fr"
         }
     ],
-    links: [
-        {
-            name: "bluesky",
-            url: "https://bluesky.app/profile/finxol.io"
-        },
-        {
-            name: "github",
-            url: "https://github.com/finxol"
-        },
-        {
-            name: "mastodon",
-            url: "https://mas.to/@finxol"
-        }
-    ]
+    links: {
+        bluesky: "https://bluesky.app/profile/finxol.io",
+        github: "https://github.com/finxol",
+        mastodon: "https://mas.to/@finxol"
+    }
 });
