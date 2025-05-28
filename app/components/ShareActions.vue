@@ -46,7 +46,9 @@ const copyToClipboard = () => {
         .writeText(window.location)
         .then(() => {
             copied.value = true;
-            setTimeout(() => (copied.value = false), 2000);
+            setTimeout(() => {
+                copied.value = false;
+            }, 2000);
         })
         .catch((error) => console.error(error));
 };

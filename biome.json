@@ -7,7 +7,13 @@
     },
     "files": {
         "ignoreUnknown": false,
-        "ignore": [".nuxt/**/*"]
+        "ignore": [
+            ".nuxt/**/*",
+            "node_modules/**/*",
+            ".data/**/*",
+            ".output/**/*",
+            "dist/**/*"
+        ]
     },
     "formatter": {
         "enabled": true,
