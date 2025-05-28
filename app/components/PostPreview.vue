@@ -20,6 +20,11 @@ const { post } = toRefs(props);
         <h1 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
             {{ post.title }}
         </h1>
+        <div class="mt-2 flex items-center gap-2">
+            <span v-for="tag in post.tags" :key="tag" class="px-2 py-0.5 text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 rounded-full">
+                {{ tag }}
+            </span>
+        </div>
         <p :class="[
             'text-neutral-500 dark:text-zinc-400',
             'my-4',

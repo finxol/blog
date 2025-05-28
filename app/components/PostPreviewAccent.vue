@@ -21,7 +21,12 @@ const { post } = toRefs(props);
             <h1 class="text-4xl font-bold text-neutral-900 dark:text-neutral-300">
                 {{ post.title }}
             </h1>
-            <div class="mt-4 flex items-center justify-start gap-4 text-neutral-600 dark:text-neutral-300">
+            <div class="my-2 flex items-center gap-2">
+                <span v-for="tag in post.tags" :key="tag" class="mr-2 mb-2 px-2 py-0.5 text-xs bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 rounded-full">
+                    {{ tag }}
+                </span>
+            </div>
+            <div class="flex items-center justify-start gap-4 text-neutral-600 dark:text-neutral-300">
                 <div v-if="post.authors" class="flex items-center gap-1">
                     <img v-if="post.authors[0].name === config.author" src="/logo.png" :alt="post.authors[0].name"
                         class="w-8 h-8 rounded-full mr-2">

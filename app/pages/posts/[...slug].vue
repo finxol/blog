@@ -65,6 +65,12 @@ if (post.value) {
                             }) }}
                         </span>
                     </span>
+·
+                    <div>
+                        <span v-for="tag in post.tags" :key="tag" class="mr-2 mb-2 px-3 py-1 text-sm bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 rounded-full">
+                            {{ tag }}
+                        </span>
+                    </div>
                 </div>
 
                 <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-4"></div>

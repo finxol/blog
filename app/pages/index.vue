@@ -9,7 +9,8 @@ const { data } = await useAsyncData("postList", () => {
         "title",
         "date",
         "description",
-        "authors"
+        "authors",
+        "tags"
     ])
         .where("published", "<>", false)
         .order("date", "DESC");
