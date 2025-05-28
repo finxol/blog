@@ -6,29 +6,29 @@ export default defineBlogConfig({
     meta: [
         {
             name: "description",
-            content: "finxol's blog",
+            content: "finxol's blog"
         },
         {
             name: "fediverse:creator",
-            content: "@finxol@mas.to",
+            content: "@finxol@mas.to"
         },
         {
             name: "fediverse:creator",
-            content: "@User038418@mamot.fr",
-        },
+            content: "@User038418@mamot.fr"
+        }
     ],
     links: [
         {
             name: "bluesky",
-            url: "https://bluesky.app/profile/finxol.io",
+            url: "https://bluesky.app/profile/finxol.io"
         },
         {
             name: "github",
-            url: "https://github.com/finxol",
+            url: "https://github.com/finxol"
         },
         {
             name: "mastodon",
-            url: "https://mas.to/@finxol",
-        },
-    ],
+            url: "https://mas.to/@finxol"
+        }
+    ]
 });

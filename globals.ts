@@ -26,14 +26,14 @@ export function defineBlogConfig(config: Prettify<Partial<BlogConfig>>) {
                       acc[provider] = true;
                       return acc;
                   },
-                  {} as Record<string, boolean>,
+                  {} as Record<string, boolean>
               )
             : { bluesky: true, clipboard: true, native: true },
         title: config.title ?? "My Blog",
         author: config.author ?? "finxol",
         meta: config.meta ?? [
-            { name: "description", content: "My blog description" },
+            { name: "description", content: "My blog description" }
         ],
-        links: config.links ?? [],
+        links: config.links ?? []
     };
 }

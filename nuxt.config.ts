@@ -8,23 +8,23 @@ export default defineNuxtConfig({
         "@nuxt/content",
         "@nuxtjs/tailwindcss",
         "@tailwindcss/typography",
-        "@nuxt/icon",
+        "@nuxt/icon"
     ],
 
     future: {
-        compatibilityVersion: 4,
+        compatibilityVersion: 4
     },
 
     app: {
         head: {
             htmlAttrs: {
-                lang: "en",
-            },
-        },
+                lang: "en"
+            }
+        }
     },
 
     runtimeConfig: {
-        public: blogConfig,
+        public: blogConfig
     },
 
     icon: {
@@ -34,21 +34,21 @@ export default defineNuxtConfig({
                 "ri:mastodon-fill",
                 "ri:bluesky-fill",
                 "ri:sun-fill",
-                "ri:moon-fill",
+                "ri:moon-fill"
             ],
-            scan: true,
-        },
+            scan: true
+        }
     },
 
     typescript: {
-        typeCheck: true,
+        typeCheck: true
     },
 
     routeRules: {
         "/": { prerender: true },
         "/about": { prerender: true },
-        "/posts/**": { prerender: true },
+        "/posts/**": { prerender: true }
     },
 
-    compatibilityDate: "2025-05-28",
+    compatibilityDate: "2025-05-28"
 });
