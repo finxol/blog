@@ -15,7 +15,7 @@ export type BlogConfig = {
         content: string;
     }[];
     links: {
-        bluesky?: `https://bluesky.app/profile/${string}`;
+        bluesky?: `https://bsky.app/profile/${string}`;
         github?: `https://github.com/${string}`;
         mastodon?: `https://${string}/@${string}`;
     };
