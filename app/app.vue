@@ -33,17 +33,17 @@ const links = ref(
         {
             icon: "ant-design:github-filled",
             title: "GitHub",
-            href: config.links.find((link) => link.name === "github")?.url
+            href: config.links.github
         },
         {
             icon: "ri:mastodon-fill",
             title: "Mastodon",
-            href: config.links.find((link) => link.name === "mastodon")?.url
+            href: config.links.mastodon
         },
         {
             icon: "ri:bluesky-fill",
             title: "BlueSky",
-            href: config.links.find((link) => link.name === "bluesky")?.url
+            href: config.links.bluesky
         }
     ].reverse()
 );
@@ -88,15 +88,19 @@ function scrollToTop() {
                         <Icon v-else name="ri:moon-fill" size="1.5rem" mode="svg" />
                     </div>
                     <nav :class="['flex items-start gap-4', 'text-gray-800 dark:text-gray-200', 'font-semibold']">
-                        <NuxtLink v-for="item in pages" :key="item.path" :to="item.path.replace('/pages', '')">
-                            {{ item.title }}
-                        </NuxtLink>
+                        <template v-for="item in pages" :key="item.path">
+                            <NuxtLink v-if="item.title" :to="item.path.replace('/pages', '')">
+                                {{ item.title }}
+                            </NuxtLink>
+                        </template>
                     </nav>
 
                     <div class="flex items-center gap-2">
-                        <NuxtLink v-for="link in links" :key="link.title" :to="link.href" target="_blank" :aria-label="link.title">
-                            <Icon :name="link.icon" size="2rem" :title="link.title" />
-                        </NuxtLink>
+                        <template v-for="link in links" :key="link.title">
+                            <NuxtLink v-if="link.href" :to="link.href" target="_blank" :aria-label="link.title">
+                                <Icon :name="link.icon" size="2rem" :title="link.title" />
+                            </NuxtLink>
+                        </template>
                     </div>
                 </div>
             </header>

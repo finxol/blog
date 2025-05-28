@@ -2,10 +2,12 @@ type Prettify<T> = {
     [K in keyof T]: T[K];
 } & {};
 
+type SharingProvider = "bluesky" | "clipboard" | "native";
+
 export type BlogConfig = {
     site: string;
     tableOfContents: boolean;
-    sharingProviders: ("bluesky" | "clipboard" | "native")[];
+    sharingProviders: SharingProvider[];
     title: string;
     author: string;
     meta: {
@@ -13,9 +15,10 @@ export type BlogConfig = {
         content: string;
     }[];
     links: {
-        name: "bluesky" | "github" | "mastodon";
-        url: string;
-    }[];
+        bluesky?: `https://bluesky.app/profile/${string}`;
+        github?: `https://github.com/${string}`;
+        mastodon?: `https://${string}/@${string}`;
+    };
 };
 
 export function defineBlogConfig(config: Prettify<Partial<BlogConfig>>) {
@@ -28,7 +31,7 @@ export function defineBlogConfig(config: Prettify<Partial<BlogConfig>>) {
                       acc[provider] = true;
                       return acc;
                   },
-                  {} as Record<string, boolean>
+                  {} as Record<SharingProvider, boolean>
               )
             : { bluesky: true, clipboard: true, native: true },
         title: config.title ?? "My Blog",
@@ -36,6 +39,6 @@ export function defineBlogConfig(config: Prettify<Partial<BlogConfig>>) {
         meta: config.meta ?? [
             { name: "description", content: "My blog description" }
         ],
-        links: config.links ?? []
+        links: config.links ?? {}
     };
 }
