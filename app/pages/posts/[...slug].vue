@@ -47,6 +47,16 @@ useSeoMeta({
                             day: 'numeric'
                         }) }}
                     </span>
+                    <span v-if="post.updated">
+                        <span class="text-neutral-500 dark:text-neutral-400 ml-2 mr-4">·</span>
+                        <span class="text-sm">
+                            Updated: {{ new Date(post.updated).toLocaleDateString('en-GB', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            }) }}
+                        </span>
+                    </span>
                 </div>
 
                 <div class="bg-stone-200 dark:bg-stone-700 h-[1px] my-4"></div>

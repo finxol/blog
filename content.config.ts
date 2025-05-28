@@ -16,6 +16,7 @@ export default defineContentConfig({
                 title: z.string(),
                 description: z.string(),
                 date: z.string().date(),
+                updated: z.string().date().optional(),
                 authors: z.array(
                     z.object({
                         name: z.string(),
