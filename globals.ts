@@ -3,6 +3,7 @@ type Prettify<T> = {
 } & {};
 
 export type BlogConfig = {
+    site: string;
     tableOfContents: boolean;
     sharingProviders: ("bluesky" | "clipboard" | "native")[];
     title: string;
@@ -19,6 +20,7 @@ export type BlogConfig = {
 
 export function defineBlogConfig(config: Prettify<Partial<BlogConfig>>) {
     return {
+        site: config.site ?? "https://example.com",
         tableOfContents: config.tableOfContents ?? true,
         sharingProviders: config.sharingProviders
             ? config.sharingProviders.reduce(

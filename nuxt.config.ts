@@ -2,13 +2,16 @@ import blogConfig from "./blog.config";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    site: { url: blogConfig.site, name: blogConfig.title },
+
     telemetry: false,
     devtools: { enabled: true },
     modules: [
         "@nuxt/content",
         "@nuxtjs/tailwindcss",
         "@tailwindcss/typography",
-        "@nuxt/icon"
+        "@nuxt/icon",
+        "nuxt-og-image"
     ],
 
     future: {
@@ -25,6 +28,16 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: blogConfig
+    },
+
+    ogImage: {
+        fonts: [
+          {
+            name: 'Recoleta',
+            weight: 700,
+            path: '/fonts/recoleta-bold.ttf',
+          }
+        ],
     },
 
     icon: {

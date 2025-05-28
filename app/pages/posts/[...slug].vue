@@ -2,7 +2,7 @@
 const config = useRuntimeConfig().public;
 const route = useRoute();
 
-const { data: post } = await useAsyncData(route.path, () =>
+const { data: post } = await useAsyncData(`post-${route.path}`, () =>
     queryCollection("posts").path(route.path).first()
 );
 
@@ -10,6 +10,14 @@ useSeoMeta({
     title: post.value?.title,
     description: post.value?.description
 });
+
+if (post.value) {
+    defineOgImageComponent("Post", {
+        title: post.value.title,
+        date: post.value.date,
+        author: post.value.authors[0]?.name,
+    });
+}
 </script>
 
 <template>

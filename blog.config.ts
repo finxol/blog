@@ -1,6 +1,7 @@
 import { defineBlogConfig } from "./globals";
 
 export default defineBlogConfig({
+    site: "https://finxol.io",
     title: "finxol's blog",
     author: "finxol",
     meta: [
