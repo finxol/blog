@@ -69,7 +69,7 @@ function scrollToTop() {
         ]">
             <header :class="[
                 'border-b-2 border-stone-200 dark:border-stone-800',
-                'py-8',
+                'py-6 md:py-8',
                 'flex justify-between align-center',
             ]">
                 <div class="flex items-center gap-4 sm:gap-6">

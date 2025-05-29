@@ -39,7 +39,7 @@ if (post.value) {
                 <h1 class="text-4xl font-bold">
                     {{ post.title }}
                 </h1>
-                <div class="flex items-center justify-start gap-4 mt-4 text-neutral-600 dark:text-neutral-300">
+                <div class="flex flex-wrap items-center justify-start gap-4 mt-4 text-neutral-600 dark:text-neutral-300">
                     <div v-if="post.authors" class="flex items-center gap-1">
                         <img v-if="post.authors[0]?.name === config.author" src="/logo.png" :alt="post.authors[0].name"
                             class="w-8 h-8 rounded-full mr-2">
@@ -65,9 +65,9 @@ if (post.value) {
                             }) }}
                         </span>
                     </span>
-·
+                    ·
                     <div>
-                        <span v-for="tag in post.tags" :key="tag" class="mr-2 mb-2 px-3 py-1 text-sm bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 rounded-full">
+                        <span v-for="tag in post.tags" :key="tag" class="mr-2 mb-2 px-3 py-1 text-xs md:text-sm bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400 rounded-full">
                             {{ tag }}
                         </span>
                     </div>
