@@ -2,6 +2,7 @@
 title: I rewrote my blog and it was harder than I expected
 description: The last time I changed anything on my previous blog was almost exactly 2 years ago. Wayyy too long. So I rewrote it completely.
 date: 2024-11-14
+updated: 2025-05-28
 authors:
   - name: finxol
 tags:
@@ -120,7 +121,7 @@ I'll be honest, minimum effort was big criteria in the final choice too.
 ### Result
 
 If you're reading this on the actual website, then you're seeing the result.
-Not too bad for an afternoon's work!
+Not too bad for an afternoon's work! *(It's been updated and improved since)*
 
 The website is really fast and snappy, as expected for a simple blog like this.
 Hosting is dead simple and pretty fast with Github Pages too.
@@ -133,3 +134,5 @@ And that's some pretty damn good results from PageSpeed Insight.
 
 I want to help out the comunity along the way, so I'll adjust a few things to make it into a template repo to use as a starter,
 in case anyone out there is looking to build a simple markdown blog with Nuxt.
+
+*Update:* I've finally taken the time, so it's now [available as a template](/posts/blog-template)!
