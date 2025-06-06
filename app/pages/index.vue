@@ -21,7 +21,7 @@ const { data } = await useAsyncData("postList", () => {
 const posts = data.value ? data.value[0]?.children : [];
 
 defineOgImageComponent("Page", {
-    description: `This is ${config.title}. Read all ${posts?.length || 0} posts published so far, but stay tuned for more!`,
+    description: `This is ${config.title}. Read all ${posts?.length || 0} posts published so far, but stay tuned for more!`
 });
 </script>
 
