@@ -1,6 +1,6 @@
 ---
 title: This blog is now a template!
-description: I mentioned I wanted to publish this blog as a template when I rebuilt it a few months ago, and here it is!
+description: I mentioned I wanted to publish this blog as a template when I rebuilt it a few months ago, and here it finally is!
 date: 2025-05-28
 authors:
   - name: finxol
@@ -11,6 +11,17 @@ published: true
 
 Are you enjoying this blog?
 If so, you can also reuse the template to make your own blog just like this one!
+
+## Features
+
+- ✏️ Easy Markdown post authoring
+- 🖌️ Clean minimal style for easy reading
+- 🚀 Deploy anywhere!
+- 🎨 Easily customisable
+- 🌐 Automatic OpenGraph image generation
+- 🖨️ Adapted styles for printing (try printing this!)
+
+Start your own blog like this one using the [Github template repository](https://github.com/finxol/nuxt-blog-template).
 
 ## Architecture
 
@@ -26,7 +37,6 @@ The contents of the About and Home pages are stored in the `content/pages` direc
 
 More explanation and details will come later in the README.md of the template repo.
 
-Start your own blog from this one using the [Github template repository](https://github.com/finxol/nuxt-blog-template).
 
 ## Get writing!
 
