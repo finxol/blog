@@ -59,8 +59,8 @@ function scrollToTop() {
 </script>
 
 <template>
-    <div :class="`min-h-screen min-w-screen ${pageBackground}`">
         <div :class="[
+            'page-container',
             pageBackground,
             'text-gray-800 dark:text-gray-300',
             'min-h-screen max-w-4xl',
@@ -129,7 +129,6 @@ function scrollToTop() {
                 </button>
             </footer>
         </div>
-    </div>
 </template>
 
 <style>
@@ -147,6 +146,42 @@ h1, h2, h3, h4, h5, h6 {
 
 code, pre {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+    }
+
+    .page-container > *:not(main) {
+        display: none;
+    }
+
+    :not(h1, h2, h3, h4, h5, h6, li) > a[href]:after {
+        content: " (" attr(href) ")";
+        font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    }
+
+    p {
+        break-inside: avoid-page;
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Force all backgrounds to be white and text to be black for print */
+    html.dark * {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Preserve some specific text colors for readability */
+    html.dark a {
+        color: #1f2937 !important;
+    }
+
+    html.dark .text-sm {
+        color: #6b7280 !important;
+    }
 }
 
 .content-grid {

@@ -70,7 +70,7 @@ onMounted(() => {
 
 <template>
   <aside
-      class="flex flex-row justify-center items-center gap-4 mt-24 md:w-[80%] mx-auto"
+      class="print:hidden flex flex-row justify-center items-center gap-4 mt-24 md:w-[80%] mx-auto"
   >
       <div class="h-1 bg-stone-200 dark:bg-stone-700 grow" />
       <div class="whitespace-nowrap px-4 flex flex-row items-center gap-4">

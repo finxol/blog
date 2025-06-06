@@ -25,7 +25,7 @@ if (post.value) {
         class="grow"
     >
         <NuxtLink
-            class="flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 mt-4"
+            class="print:hidden flex items-center gap-1 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 mt-4"
             to="/"
         >
             <Icon name="ri:arrow-drop-left-line" mode="svg" />
