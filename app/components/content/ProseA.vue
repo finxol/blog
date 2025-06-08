@@ -33,6 +33,7 @@ const props = defineProps({
 
 <style scoped>
 a {
+    font-weight: inherit;
     transition: background-size .3s ease;
     text-decoration: none;
     background-image: linear-gradient(to right, #000, #000);
