@@ -6,18 +6,36 @@ authors:
   - name: finxol
 tags:
   - opinion
-  - tools
+  - tooling
 published: false
 ---
 
 All the ["Just Fucking use HTML"](https://justfuckingusehtml.com/) noise is quite aggressive and hard to ignore.
-I think they've got a point, but that point lacks nuance.
+I think they've got a point, but that point also lacks nuance.
 There's a reason more complex tools were built and are as popular as they are.
 
 Let's dive into simplicity, complexity and tooling.
 
 ## The case for plain HTML
 
+<!-- introduce things better please -->
+
+Originally, web browsers were built to display simple text files with a special kind of markup called HTML,
+that would place things in a certain way.
+The browser would ask a server for a specific file, the server would send it back, and the browser would parse and diplay it.
+It still works the same way nowadays, but we've added so many things on top that the possibilities are endless.
+
+The next evolution that came along was CSS.
+This allowed us to control the way the displayed HTML looked.
+
+Javacript only came in a couple years later to do a few very simple client-side manipulations on the page.
+The web
+
+
+In a lot of cases such as a portfolio, blog, landing page, or any static website,
+there's really no need to introduce unnecessary overhead.
+
+<!--
 simpler is often better, if it can get the job done.
 no need to introduce complexity when it's not actually needed.
 
@@ -25,13 +43,16 @@ increased overhead can easily lead to worse perf.
 
 simple things keep things simple.
 no need for build steps or complex deployments.
+-->
 
 ## The case for more complex tooling
 
+<!--
 plain html is ugly.
 css is hard.
 
 dx is also important.
+-->
 
 ## Exceptions
 
