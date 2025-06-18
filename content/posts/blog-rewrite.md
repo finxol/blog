@@ -121,7 +121,9 @@ I'll be honest, minimum effort was big criteria in the final choice too.
 ### Result
 
 If you're reading this on the actual website, then you're seeing the result.
-Not too bad for an afternoon's work! *(It's been updated and improved since)*
+Not too bad for an afternoon's work!
+*Edit:* To be fair, it's been updated and improved a good bit since.
+You can still see the original (new) version [here](https://finxol-blog-z6f9qqkjrjz5.deno.dev/).
 
 The website is really fast and snappy, as expected for a simple blog like this.
 Hosting is dead simple and pretty fast with Github Pages too.
