@@ -1,10 +1,10 @@
 <template>
-  <NuxtLink
-    :href="props.href"
-    :target="props.target"
-  >
-    <slot />
-  </NuxtLink>
+    <NuxtLink
+        :href="props.href"
+        :target="props.href.at(0) === '#' ? '' : props.target"
+    >
+        <slot />
+    </NuxtLink>
 </template>
 
 <script setup lang="ts">
