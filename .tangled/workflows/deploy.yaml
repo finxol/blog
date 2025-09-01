@@ -1,0 +1,25 @@
+when:
+    - event: ["push", "manual"]
+      branch: ["main"]
+
+engine: "nixery"
+
+dependencies:
+    # nixpkgs
+    nixpkgs:
+        - deno
+        - node
+        - pnpm
+
+steps:
+    - name: Install dependencies
+      command: pnpm install
+
+    - name: Generate static site
+      command: pnpm generate
+
+    - name: Install deployctl
+      command: deno install -gArf jsr:@deno/deployctl
+
+    - name: Deploy to Deno Deploy
+      command: deployctl deploy --project finxol-blog --entrypoint https://deno.land/std@0.140.0/http/file_server.ts --include .output/public
