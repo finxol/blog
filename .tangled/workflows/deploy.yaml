@@ -5,7 +5,7 @@ when:
 dependencies:
     nixpkgs:
         - deno
-        - nodejs_22
+        - nodejs
         - pnpm
 
 engine: "nixery"
