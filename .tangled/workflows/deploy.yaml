@@ -8,6 +8,7 @@ dependencies:
         - nodejs
         - pnpm
         - python3
+        - gnused
 
 engine: "nixery"
 
