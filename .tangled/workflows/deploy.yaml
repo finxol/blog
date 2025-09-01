@@ -8,8 +8,6 @@ dependencies:
         - nodejs
         - pnpm
 
-engine: "nixery"
-
 steps:
     - name: Install dependencies
       command: |
