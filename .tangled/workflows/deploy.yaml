@@ -7,7 +7,7 @@ dependencies:
         - deno
         - nodejs
         - pnpm
-        - python
+        - python3
 
 engine: "nixery"
 
