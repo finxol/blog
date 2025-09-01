@@ -86,7 +86,7 @@ if (post.value) {
 
             <TableOfContents v-if="config.tableOfContents" :post="post" />
 
-            <ContentRenderer :value="post" class="post-body prose prose-lg leading-7 prose-slate dark:prose-invert text-justify md:w-[80%] mx-auto text-zinc-800 dark:text-zinc-200" />
+            <ContentRenderer :value="post" class="post-body prose prose-lg leading-7 prose-slate dark:prose-invert text-justify text-balance md:w-[80%] mx-auto text-zinc-800 dark:text-zinc-200" />
 
             <ShareActions :title="post.title" :description="post.description" :author="post.authors[0]?.name" />
 
