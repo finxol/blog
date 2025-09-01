@@ -27,5 +27,5 @@ steps:
 
     - name: Deploy to Deno Deploy
       command: |
-          cd blog
+          cd .output/public
           ~/.deno/bin/deployctl deploy --project finxol-blog --entrypoint jsr:@std/http/file-server --include=. --prod
