@@ -10,4 +10,4 @@ tags:
 published: false
 ---
 
-This is the post
+This is the post about atproto
