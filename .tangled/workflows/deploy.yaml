@@ -1,5 +1,5 @@
 when:
-    - event: ["push", "manual"]
+    - event: ["push", "pull_request"]
       branch: ["main"]
 
 dependencies:
@@ -25,4 +25,5 @@ steps:
 
     - name: Deploy to Deno Deploy
       command: |
-          deployctl deploy --project finxol-blog --entrypoint https://deno.land/std@0.140.0/http/file_server.ts --include .output/public
+          cd blog
+          deployctl deploy --project finxol-blog --entrypoint jsr:@std/http/file-server --include=. --prod
