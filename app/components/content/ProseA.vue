@@ -38,7 +38,7 @@ a {
     text-decoration: none;
     background-image: linear-gradient(to right, #000, #000);
     background-repeat: no-repeat;
-    background-size: 100% .5px;
+    background-size: 100% 1px;
     background-position: bottom .2ch left;
 
     .dark & {
