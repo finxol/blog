@@ -1,5 +1,5 @@
 ---
-title: I rewrote my blog and it was harder than I expected
+title: I rewrote my blog and it was more trouble than I expected
 description: The last time I changed anything on my previous blog was almost exactly 2 years ago. Wayyy too long. So I rewrote it completely.
 date: 2024-11-14
 updated: 2025-05-28
