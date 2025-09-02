@@ -7,7 +7,7 @@ authors:
 tags:
   - atproto
   - self-hosting
-published: false
+published: true
 ---
 
 The [Atmosphere Protocol](https://atproto.com/), or atproto for short, is the protocol behind the Bluesky social network.
