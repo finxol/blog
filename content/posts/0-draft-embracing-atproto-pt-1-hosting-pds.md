@@ -15,9 +15,11 @@ It's "an open, decentralized network for building social applications."
 
 _If you are familiar with ATProto already, [skip ahead](#setting-up-a-pds)._
 
-Atproto is decentralised in a way that differs from other solutions like [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), which services like Mastodon implement.
-There are multiple parts that work together and can be hosted separately.
-Let's go over some rough definitions for the important bits, you'll find better explanations in the [atproto docs](https://atproto.com/guides/glossary).
+In atproto's decentralisation model, there are multiple parts that work together and can be hosted separately.
+This differs from other solutions like [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), which services like Mastodon implement.
+Dan Abramov, who previously worked at Bluesky, made a [good write-up explaining the difference](https://news.ycombinator.com/item?id=45077986).
+
+Let's go over some rough definitions for the important bits. You'll find better explanations in the [atproto docs](https://atproto.com/guides/glossary).
 
 #### PDS
 
