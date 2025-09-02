@@ -148,6 +148,11 @@ code, pre {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
 }
 
+html:not(.dark) .prose pre {
+    background-color: oklch(0.95 0.0013 106.42);
+    color: oklch(0.15 0.0013 106.42);
+}
+
 @media print {
     @page {
         size: A4 portrait;
