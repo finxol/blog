@@ -153,6 +153,10 @@ html:not(.dark) .prose pre {
     color: oklch(0.15 0.0013 106.42);
 }
 
+html.dark .schema {
+    filter: invert(1);
+}
+
 @media print {
     @page {
         size: A4 portrait;
