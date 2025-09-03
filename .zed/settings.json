@@ -1,0 +1,22 @@
+{
+    "language_servers": ["biome"],
+    "languages": {
+        "JavaScript": {
+            "formatter": { "language_server": { "name": "biome" } },
+            "language_servers": ["biome", "typescript-language-server"]
+        },
+
+        "TypeScript": {
+            "formatter": { "language_server": { "name": "biome" } },
+            "language_servers": ["biome", "typescript-language-server"]
+        },
+
+        "TSX": {
+            "formatter": { "language_server": { "name": "biome" } },
+            "language_servers": ["biome", "typescript-language-server"]
+        },
+        "JSON": { "formatter": { "language_server": { "name": "biome" } } },
+        "JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+        "CSS": { "formatter": { "language_server": { "name": "biome" } } }
+    }
+}
