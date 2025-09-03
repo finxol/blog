@@ -22,7 +22,13 @@ export default defineNuxtConfig({
         head: {
             htmlAttrs: {
                 lang: "en"
-            }
+            },
+            script: [
+                {
+                    defer: true,
+                    src: "https://assets.onedollarstats.com/stonks.js"
+                }
+            ]
         }
     },
 
