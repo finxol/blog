@@ -1,7 +1,9 @@
+import { defineNuxtConfig } from "nuxt/config";
 import blogConfig from "./blog.config";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    //@ts-ignore
     site: { url: blogConfig.site, name: blogConfig.title },
 
     telemetry: false,
@@ -60,7 +62,12 @@ export default defineNuxtConfig({
     },
 
     typescript: {
-        typeCheck: true
+        typeCheck: true,
+        tsConfig: {
+            compilerOptions: {
+                strict: true
+            }
+        }
     },
 
     routeRules: {
