@@ -60,16 +60,16 @@ const filteredPosts = computed(() => {
     </h2>
 
     <section class="my-6 flex flex-row justify-between items-start gap-4">
-        <p class="text-sm text-gray-500 dark:text-gray-400 w-max text-nowrap">
+        <p class="text-sm text-gray-500 dark:text-gray-400 w-max text-nowrap mt-1">
             Filter posts:
         </p>
-        <div class="overflow-x-scroll flex flex-row items-start">
+        <div class="overflow-x-scroll flex flex-row items-center">
             <button
                 v-for="tag in tags"
                 :key="tag"
                     :class="[
                         'flex px-2 py-1 mr-2 mb-2 w-max flex-row items-center gap-2',
-                        `${tag === filter ? 'bg-gray-500 dark:bg-gray-500 text-gray-100 dark:text-gray-100' : 'bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200'}`,
+                        `${tag === filter ? 'bg-stone-500 dark:bg-stone-500 text-stone-100 dark:text-stone-100' : 'bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400'}`,
                         'rounded-full text-sm font-medium lowercase text-nowrap'
                     ]"
                     @click="filter = filter === tag ? undefined : tag"
