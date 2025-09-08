@@ -5,7 +5,7 @@ date: 2025-03-31
 authors:
   - name: finxol
 tags:
-  - code
+  - auth
   - open source
 published: true
 ---

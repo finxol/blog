@@ -6,7 +6,6 @@ updated: 2025-05-28
 authors:
   - name: finxol
 tags:
-  - code
   - rants
 published: true
 ---

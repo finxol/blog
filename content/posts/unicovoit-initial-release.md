@@ -6,7 +6,6 @@ date: 2022-09-04
 authors:
   - name: finxol
 tags:
-  - Launch
   - Release
   - UniCovoit
 published: true

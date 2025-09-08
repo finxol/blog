@@ -8,7 +8,6 @@ authors:
 tags:
   - writeup
   - HeroCTF
-  - prog
 published: true
 ---
 

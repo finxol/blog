@@ -8,7 +8,6 @@ authors:
 tags:
   - writeup
   - 404ctf
-  - OSINT
 published: true
 ---
 

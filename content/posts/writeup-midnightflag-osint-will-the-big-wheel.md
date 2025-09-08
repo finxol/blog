@@ -8,7 +8,6 @@ authors:
 tags:
   - writeup
   - MidnightFlagCTF
-  - OSINT
 published: true
 ---
 
