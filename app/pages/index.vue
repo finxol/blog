@@ -59,11 +59,11 @@ const filteredPosts = computed(() => {
         Posts
     </h2>
 
-    <section class="my-6 flex flex-row justify-between items-start gap-4">
+    <section class=" overflow-x-scroll my-6 flex flex-row justify-between items-start gap-4">
         <p class="text-sm text-gray-500 dark:text-gray-400 w-max text-nowrap mt-1">
-            Filter posts:
+            Filter by tag:
         </p>
-        <div class="overflow-x-scroll flex flex-row items-center">
+        <div class="flex flex-row items-center">
             <button
                 v-for="tag in tags"
                 :key="tag"
