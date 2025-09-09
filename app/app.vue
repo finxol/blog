@@ -80,6 +80,7 @@ function scrollToTop() {
                 </div>
 
                 <div class="flex items-center gap-4 sm:gap-8">
+                    <Country />
                     <div
                         class="cursor-pointer"
                         @click="toggleDark()"
