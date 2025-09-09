@@ -20,7 +20,6 @@ export default defineBlogConfig({
     ],
     links: {
         bluesky: "https://bsky.app/profile/finxol.io",
-        github: "https://github.com/finxol",
-        mastodon: "https://mas.to/@finxol"
+        github: "https://github.com/finxol"
     }
 });
