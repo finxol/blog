@@ -5,18 +5,24 @@ const props = defineProps<{
     title: string;
     date: string;
     author: string;
+    description: string;
 }>();
 
-const { title, date, author } = props;
+const { title, date, author, description } = props;
 </script>
 
 <template>
   <div class="h-full w-full flex items-start justify-start bg-stone-100">
     <div class="flex items-start justify-start h-full">
       <div class="flex flex-col justify-between w-full h-full px-30 py-15" style="font-family: 'Recoleta'">
-        <h1 class="text-[90px] text-left">
-          {{ title }}
-        </h1>
+        <div>
+            <h1 class="text-[80px] text-left">
+                {{ title }}
+            </h1>
+            <p class="text-[30px]  text-left line-clamp-3 text-ellipsis" style="font-family: 'Orkney Regular'">
+                {{ description }}
+            </p>
+        </div>
         <div class="flex flex-row items-center justify-between text-4xl font-bold mb-0">
             <div class="flex flex-row items-center gap-8">
                 <img src="/logo.png" alt="Author Avatar" height="56" width="56">

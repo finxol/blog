@@ -44,6 +44,11 @@ export default defineNuxtConfig({
                 name: "Recoleta",
                 weight: 700,
                 path: "/fonts/recoleta-bold.ttf"
+            },
+            {
+                name: "Orkney Regular",
+                weight: 700,
+                path: "/fonts/orkney-regular.ttf"
             }
         ]
     },

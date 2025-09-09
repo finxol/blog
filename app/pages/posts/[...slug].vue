@@ -14,6 +14,7 @@ useSeoMeta({
 if (post.value) {
     defineOgImageComponent("Post", {
         title: post.value.title,
+        description: post.value.description,
         date: post.value.date,
         author: post.value.authors[0]?.name
     });
