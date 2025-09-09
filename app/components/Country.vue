@@ -1,26 +1,18 @@
 <script setup lang="ts">
 const data = await $fetch("https://hook.finxol.io/sensors/country")
     .then((res) => {
-        return res as { country: string; country_code: string };
+        return res as {
+            country: string;
+            country_code: string;
+            country_flag: string;
+        };
     })
     .catch((e) => {
         console.error(e);
     });
 
 const country = data?.country;
-
-const letterA = "a".codePointAt(0);
-//biome-ignore format: breaks emoji
-const regionalIndicatorA = '🇦'.codePointAt(0);
-
-const toRegionalIndicator = (char: string) =>
-    //@ts-ignore
-    String.fromCodePoint(char.codePointAt(0) - letterA + regionalIndicatorA);
-
-const emoji = data?.country_code
-    .split("")
-    .map((char) => toRegionalIndicator(char))
-    .join("");
+const emoji = data?.country_flag;
 </script>
 
 <template>
