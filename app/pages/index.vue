@@ -68,7 +68,7 @@ const filteredPosts = computed(() => {
                 v-for="tag in tags"
                 :key="tag"
                     :class="[
-                        'flex px-2 py-1 mr-2 mb-2 w-max flex-row items-center gap-2',
+                        'flex px-3 py-1 mr-2 mb-2 w-max flex-row items-center gap-1',
                         `${tag === filter ? 'bg-stone-500 dark:bg-stone-500 text-stone-100 dark:text-stone-100' : 'bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400'}`,
                         'rounded-full text-sm font-medium lowercase text-nowrap'
                     ]"
@@ -79,6 +79,7 @@ const filteredPosts = computed(() => {
                     name="ri:close-line"
                     size="1rem"
                     mode="svg"
+                    class="-ms-1"
                 />
                 {{ tag }}
             </button>
