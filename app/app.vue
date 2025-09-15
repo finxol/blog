@@ -158,6 +158,10 @@ html.dark .schema {
     filter: invert(1);
 }
 
+details.minor-callout summary {
+    @apply text-stone-500 px-4 text-base;
+}
+
 @media print {
     @page {
         size: A4 portrait;
