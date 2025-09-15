@@ -16,7 +16,7 @@ const emoji = data?.country_flag;
 </script>
 
 <template>
-    <div class="hidden md:flex flex-row items-center gap-2">
+    <div v-if="data" class="hidden md:flex flex-row items-center gap-2">
         <span>
             Currently in:
         </span>
