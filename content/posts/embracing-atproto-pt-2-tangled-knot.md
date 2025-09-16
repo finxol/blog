@@ -1,19 +1,19 @@
 ---
 title: "Embracing ATProto, part 2: Tangled Knots and social coding"
 description: |
-    You thought Github was a social coding platform? Think again, get ready to tangle!
-    Built on atproto, tangled allows you to use your Bluesky identity on a (not quite yet) fully feldged git platform!
+    You thought Github was a social coding platform? Think again, and get ready to tangle!
+    Built on atproto, tangled allows you to use your Bluesky/atproto identity on a (not quite yet) fully feldged git platform!
 date: 2025-09-15
 authors:
   - name: finxol
 tags:
   - atproto
   - self-hosting
-published: false
+published: true
 ---
 
 I recently set up my own atproto PDS, for use with Bluesky and all other atproto apps.
-If you already feel lost, check out last week's post where I wuickly explain what atproto is,
+If you already feel lost, check out last week's post where I quickly explain what atproto is,
 roughly how it works, and the steps I followed to get my PDS running.
 
 ::Bookmark{url="/posts/embracing-atproto-pt-1-hosting-pds"}
@@ -21,7 +21,7 @@ Embracing ATProto, part 1: Setting up a PDS
 ::
 
 The PDS setup and migration was an overall very smooth process.
-Bluesky and the AT Protocol are built by a very competent team of well funded engineers working on it for a few years already.
+Bluesky and the AT Protocol are built by a very competent team of well funded engineers who've been working on it for a few years already.
 
 ## What's tangled?
 
@@ -29,29 +29,47 @@ Bluesky and the AT Protocol are built by a very competent team of well funded en
 It's a "social-enabled git collaboration platform" built for decentralisation, ownership, and social coding.
 
 The platform has gained a lot of traction since, and the community is very much involved in the development, but for now tangled is still in alpha.
-That doesn't mean it's not usable yet, just that some things may break.
+That doesn't mean it's not usable yet, simply that some things may break.
 
 ### What's a Knot?
 
 Just like plain atproto, tangled has some lingo of its own.
 
-In tangled, a knot is essentially a git server.
-It's sort of like an atproto PDS in the sense that it's where your data—here your code—lives.
+In tangled, a knot is essentially an atproto-enabled git server.
+It's sort of like a PDS in the sense that it's where your data—here your code—lives.
 
 That's the main tangled-specific decentralised part, and what makes tangled special.
-You can keep ownership of your code, without cutting it off from a popular git platform by running it on a private Gitea or Gitlab server.
+You can keep ownership of your code, without cutting it off from a popular git platform—which
+is a side effect of running a private Gitea or Gitlab server.
 
 ## Setting up a Knot
 
 Setting up my own knot took a little bit more work than for the PDS.
-The [official docs](https://tangled.sh/@tangled.sh/core/blob/master/docs/knot-hosting.md) give instructions for installation on a NixOS system.
+
+The [official docs](https://tangled.sh/@tangled.sh/core/blob/master/docs/knot-hosting.md) give instructions for installation on a NixOS system,
+but I'm not running NixOS on my server.
+Luckily, they also provide a community-maintained [Docker install process](https://tangled.sh/@tangled.sh/knot-docker).
+
+At the top of the README that serves as a documentation page, they talk about a pre-built image to use.
+Perfect!
+That's exactly what I'm looking for.
+Just need to spin up the container and we're done!
+
+Not quite, unfortunately...
+
+I tried that route, added my knot on the tangled UI, but couldn't get it verified.
+I spent way too long trying to debug the parts I control, mainly the Caddy reverse proxy rules.
+It turns out the pre-built image was just out of date, and rebuilding it myself fixed it immediately...
+
+Ultimately, setting up a knot isn't all that hard.
+I just ran into a slightly stupid version mismatch problem a closer inspection could've revealed earlier.
 
 ## Spindles & CI
 
 Another piece of lingo from the tangled world is "Spindle".
 
 A Spindle is a very simple CI runner for tangled.
-It runs one Docker container per run, and gives access to any Nixpkg.
+It spins up one Docker container per run, and gives access to any Nixpkg.
 The syntax is very similar to Github Actions workflow files, with some slight differences.
 
 Since it's brand new, there isn't access to the thousands of pre-made reusable Github Actions,
@@ -76,14 +94,14 @@ It is very much a me problem, so I'll figure out a way around it eventually.
 
 Migrating the repo over is the simplest things ever.
 
-Just create a new repo on tangled—selecting your knot—set the remote on your local repo, and push to it!
-If you specified the knot correctly when creating your repo, it should now live directly on your Knot.
+Just create a new repo on tangled—making sure to select your knot, set the remote on your local repo, and push to it!
+If you specified the knot correctly when creating your repo, the repo should now live directly on your Knot.
 
 <img src="/posts/embracing-atproto-pt2/new-repo.png" alt="Select your new knot when creating a repo" width="80%" style="margin: auto;" />
 
 You can now use git just as you normally do!
 
-### CI
+### CI for auto-deploy
 
 Migrating CI takes a tiny bit more work to migrate.
 I had a Github Action workflow to automatically deploy this blog to Deno Deploy on push.
@@ -141,7 +159,7 @@ when:
 ```
 
 I'll have a look at branch deploys later.
-It needs a bit more manual work since the official GH Action doesn't do it for us.
+It needs a bit more manual work since the official GH Action doesn't handle it for us.
 
 Since spindles work slightly differently to Github Actions runners, we need to give it a list of dependencies to install.
 It's similar to the setup steps in the GH workflow to install node and pnpm.
@@ -165,12 +183,12 @@ Adding the corresponding nixpkgs in the dependencies array fixes this easily.
 
 Now we can get to the actual steps of the workflow.
 
-Since we don't have access to the existing Github Actions, there's a few sections that needed adapting or manual work.
+Since we don't have access to the existing Github Actions, there's a couple sections that needed adapting or manual work.
 The install and generate steps are exactly the same, but the deploy step changes.
 
 To replace the official Deno Deploy GH Action, we can directly use their `deployctl` cli tool, and give it the appropriate parametres.
 
-I also used this as an excuse to using the `jsr:@std/http/file-server` entrypoint instead of the deno.land url style.
+I also used this as an excuse to switch to the `jsr:@std/http/file-server` entrypoint instead of the deno.land url style.
 
 ```yaml
 steps:
@@ -240,8 +258,8 @@ steps:
 It took me a little bit more time to get things working right.
 I found a little bug in the tangled UI regarding spindle runs.
 
-When pushing to the official knot, the workflow got picked up fine by the official spindle, and showed up in the UI.
-When I pushed to my knot however, the official spindle ran the workflow, but it didn't show in the UI.
+When pushing to the *official* knot, the workflow got picked up fine by the official spindle, and showed up in the UI.
+When I pushed to *my* knot however, the official spindle ran the workflow, but it didn't show in the UI.
 It took me a while to realise what was going on.
 
 I thought the spindle wasn't picking up the workflow, but the bug was simply with showing the info in the UI.
