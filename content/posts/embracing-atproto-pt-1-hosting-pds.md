@@ -99,7 +99,7 @@ and saw everything working as expected!
 
 *Edit:*
 Also, make sure the ***time*** is right on your server.
-An incorrect system time will lead to incorrect timestamps in oauth tokens, getting them rejected by some clients.
+An incorrect system time will lead to incorrect timestamps in OAuth tokens, getting them rejected by some clients.
 My server time was off by a few dozen seconds, enough to prevent me from logging into Tangled...
 
 ## Account Migration
