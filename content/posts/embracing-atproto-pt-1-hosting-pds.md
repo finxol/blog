@@ -2,6 +2,7 @@
 title: "Embracing ATProto, part 1: Setting up a PDS"
 description: In this series of posts, I'll explore my journey into setting up my workflows and services for atproto. The first step is setting up my PDS. Let's start with a bit of explanation for all this lingo.
 date: 2025-09-03
+updated: 2025-09-17
 authors:
   - name: finxol
 tags:
@@ -95,6 +96,11 @@ services:
 Once the script finished and everything was running, I simply pinged the pds with `curl https://pds.finxol.io/xrpc/_health`,
 tested the websocket connection as stated in the docs, only with [`websocat`](https://github.com/vi/websocat),
 and saw everything working as expected!
+
+*Edit:*
+Also, make sure the ***time*** is right on your server.
+An incorrect system time will lead to incorrect timestamps in oauth tokens, getting them rejected by some clients.
+My server time was off by a few dozen seconds, enough to prevent me from logging into Tangled...
 
 ## Account Migration
 
