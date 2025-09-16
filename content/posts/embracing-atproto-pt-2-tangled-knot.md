@@ -3,7 +3,7 @@ title: "Embracing ATProto, part 2: Tangled Knots and social coding"
 description: |
     You thought Github was a social coding platform? Think again, and get ready to tangle!
     Built on atproto, tangled allows you to use your Bluesky/atproto identity on a (not quite yet) fully feldged git platform!
-date: 2025-09-15
+date: 2025-09-17
 authors:
   - name: finxol
 tags:
