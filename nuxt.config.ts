@@ -38,6 +38,10 @@ export default defineNuxtConfig({
         public: blogConfig
     },
 
+    content: {
+        experimental: { sqliteConnector: "native" }
+    },
+
     ogImage: {
         fonts: [
             {
@@ -81,5 +85,5 @@ export default defineNuxtConfig({
         "/posts/**": { prerender: true }
     },
 
-    compatibilityDate: "2025-05-28"
+    compatibilityDate: "2025-11-05"
 });
