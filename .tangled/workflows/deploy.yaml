@@ -11,4 +11,4 @@ engine: "nixery"
 steps:
     - name: Deploy to Deno Deploy
       command: |
-          deno deploy
+          deno deploy --prod
