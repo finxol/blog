@@ -1,31 +1,14 @@
 when:
-    - event: []
+    - event: ["push"]
       branch: ["main"]
 
 dependencies:
     nixpkgs:
         - deno
-        - nodejs
-        - pnpm
-        - python3
-        - gnused
 
 engine: "nixery"
 
 steps:
-    - name: Install dependencies
-      command: |
-          pnpm install
-
-    - name: Generate static site
-      command: |
-          pnpm generate
-
-    - name: Install deployctl
-      command: |
-          deno install -gArf jsr:@deno/deployctl
-
     - name: Deploy to Deno Deploy
       command: |
-          cd .output/public
-          ~/.deno/bin/deployctl deploy --project finxol-blog --entrypoint jsr:@std/http/file-server --include=. --prod
+          deno deploy

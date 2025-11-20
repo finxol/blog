@@ -85,5 +85,12 @@ export default defineNuxtConfig({
         "/posts/**": { prerender: true }
     },
 
+    nitro: {
+        prerender: {
+            routes: ["/", "/about"],
+            crawlLinks: true
+        }
+    },
+
     compatibilityDate: "2025-11-05"
 });
