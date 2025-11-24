@@ -1,19 +1,23 @@
 {
-    "language_servers": ["biome"],
+    "language_servers": ["deno", "..."],
     "languages": {
+        "Vue.js": {
+            "language_servers": ["deno", "..."]
+        },
+
         "JavaScript": {
             "formatter": { "language_server": { "name": "biome" } },
-            "language_servers": ["biome", "typescript-language-server"]
+            "language_servers": ["deno", "..."]
         },
 
         "TypeScript": {
             "formatter": { "language_server": { "name": "biome" } },
-            "language_servers": ["biome", "typescript-language-server"]
+            "language_servers": ["deno", "..."]
         },
 
         "TSX": {
             "formatter": { "language_server": { "name": "biome" } },
-            "language_servers": ["biome", "typescript-language-server"]
+            "language_servers": ["deno", "..."]
         },
         "JSON": { "formatter": { "language_server": { "name": "biome" } } },
         "JSONC": { "formatter": { "language_server": { "name": "biome" } } },
