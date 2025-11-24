@@ -10,6 +10,7 @@ tags:
   - atproto
   - self-hosting
 published: true
+bskyCid: bafyreid4opjtllapzeyjgrsqcfrzyz2t6wjmxulmkhuh2wc6cyg5bre2su
 ---
 
 I recently set up my own atproto PDS, for use with Bluesky and all other atproto apps.
